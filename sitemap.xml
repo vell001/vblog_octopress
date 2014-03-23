@@ -1,15 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://vell001.github.io/blog/archives/</loc>
+        <loc>http://vblog.vell001.ml/blog/2014/03/08/hello_world/</loc>
+        <lastmod>2014-03-23T20:35:00+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://vblog.vell001.ml/blog/2014/03/09/vsim/</loc>
+        <lastmod>2014-03-23T20:35:00+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://vblog.vell001.ml/blog/2014/03/21/c_learning/</loc>
+        <lastmod>2014-03-23T20:35:00+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://vblog.vell001.ml/blog/archives/</loc>
         <lastmod>2014-03-23T18:08:10+08:00</lastmod>
     </url>
     <url>
-        <loc>http://vell001.github.io/</loc>
+        <loc>http://vblog.vell001.ml/</loc>
         <lastmod>2014-03-23T18:08:10+08:00</lastmod>
     </url>
     <url>
-        <loc>http://vell001.github.io/robots.txt</loc>
+        <loc>http://vblog.vell001.ml/robots.txt</loc>
         <lastmod>2014-03-23T18:08:10+08:00</lastmod>
     </url>
 </urlset>
