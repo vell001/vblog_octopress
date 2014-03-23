@@ -5,7 +5,6 @@ date: 2014-03-23 22:13:05 +0800
 comments: true
 categories: octopress
 ---
-##今天我总算是使用上了高大上的octopress了，不容易啊，现在我把之前的博客全部搬到了octopress上了，在github上办博客让我不用再担心流量和广告了！～～～爽啊
 ###我使用octopress时遇到的问题汇总：
 
 * ``` Error: Permission denied (publickey) ```  
