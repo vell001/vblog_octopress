@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | VBlog]]></title>
   <link href="http://vblog.vell001.ml/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://vblog.vell001.ml/"/>
-  <updated>2014-03-23T23:10:20+08:00</updated>
+  <updated>2014-03-23T23:44:14+08:00</updated>
   <id>http://vblog.vell001.ml/</id>
   <author>
     <name><![CDATA[VellBibi]]></name>
@@ -18,7 +18,9 @@
     <link href="http://vblog.vell001.ml/2014/03/23/some-problem-with-octopress.html"/>
     <updated>2014-03-23T22:13:05+08:00</updated>
     <id>http://vblog.vell001.ml/2014/03/23/some-problem-with-octopress</id>
-    <content type="html"><![CDATA[<h3>我使用octopress时遇到的问题汇总：</h3>
+    <content type="html"><![CDATA[<h2>今天我总算是使用上了高大上的octopress了，不容易啊，现在我把之前的博客全部搬到了octopress上了，在github上办博客让我不用再担心流量和广告了！～～～爽啊</h2>
+
+<h3>我使用octopress时遇到的问题汇总：</h3>
 
 <ul>
 <li><code>Error: Permission denied (publickey)</code></li>
