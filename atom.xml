@@ -4,7 +4,7 @@
   <title><![CDATA[VBlog]]></title>
   <link href="http://vblog.vell001.ml/atom.xml" rel="self"/>
   <link href="http://vblog.vell001.ml/"/>
-  <updated>2014-03-23T21:04:01+08:00</updated>
+  <updated>2014-03-23T21:26:18+08:00</updated>
   <id>http://vblog.vell001.ml/</id>
   <author>
     <name><![CDATA[VellBibi]]></name>
@@ -37,22 +37,34 @@
 </ol>
 </blockquote>
 
-<p>代码：</p>
+<p>代码：</p></blockquote>
 
-<pre><code>#include &lt;stdio.h&gt;
+<figure class='code'><figcaption><span>c C </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#include &lt;stdio.h>
+</span><span class='line'>
+</span><span class='line'>int const shift = sizeof(int) * 8 - 1;
+</span><span class='line'>
+</span><span class='line'>#define max(a,b) ((((a)-(b))&(1 &lt;&lt; shift))?b:a)
+</span><span class='line'>
+</span><span class='line'>// test
+</span><span class='line'>void main()
+</span><span class='line'>{
+</span><span class='line'>  printf("%d", max(23,3));
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
 
-int const shift = sizeof(int) * 8 - 1;
 
-#define max(a,b) ((((a)-(b))&amp;(1 &lt;&lt; shift))?b:a)
-
-// test
-void main()
-{
-    printf("%d", max(23,3));
-}
-</code></pre>
-
-<p>2014/3/21 22:45:13</p></blockquote>
+<p>2014/3/21 22:45:13</p>
 
 <hr />
 
@@ -72,9 +84,9 @@ int main()
     cout &lt;&lt; "filename:" &lt;&lt; (file) &lt;&lt; ",line is " &lt;&lt; line &lt;&lt; endl;
     return 0;
 }
-</code></pre></blockquote>
+</code></pre>
 
-<p>2014/3/21 23:06:16</p>
+<p>2014/3/21 23:06:16</p></blockquote>
 
 <hr />
 

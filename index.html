@@ -115,22 +115,34 @@
 </ol>
 </blockquote>
 
-<p>代码：</p>
+<p>代码：</p></blockquote>
 
-<pre><code>#include &lt;stdio.h&gt;
+<figure class='code'><figcaption><span>c C </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#include &lt;stdio.h>
+</span><span class='line'>
+</span><span class='line'>int const shift = sizeof(int) * 8 - 1;
+</span><span class='line'>
+</span><span class='line'>#define max(a,b) ((((a)-(b))&(1 &lt;&lt; shift))?b:a)
+</span><span class='line'>
+</span><span class='line'>// test
+</span><span class='line'>void main()
+</span><span class='line'>{
+</span><span class='line'>  printf("%d", max(23,3));
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
 
-int const shift = sizeof(int) * 8 - 1;
 
-#define max(a,b) ((((a)-(b))&amp;(1 &lt;&lt; shift))?b:a)
-
-// test
-void main()
-{
-    printf("%d", max(23,3));
-}
-</code></pre>
-
-<p>2014/3/21 22:45:13</p></blockquote>
+<p>2014/3/21 22:45:13</p>
 
 <hr />
 
@@ -150,9 +162,9 @@ int main()
     cout &lt;&lt; "filename:" &lt;&lt; (file) &lt;&lt; ",line is " &lt;&lt; line &lt;&lt; endl;
     return 0;
 }
-</code></pre></blockquote>
+</code></pre>
 
-<p>2014/3/21 23:06:16</p>
+<p>2014/3/21 23:06:16</p></blockquote>
 
 <hr />
 
@@ -590,6 +602,15 @@ I am so unlucky today. In the morning, I tried to fix my two motor on the <em>bo
 
 
 
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/VellBibi?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
 
 
   
@@ -606,19 +627,26 @@ I am so unlucky today. In the morning, I tried to fix my two motor on the <em>bo
 
 
 
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 
 
   <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
     })();
   </script>
+
+
 
 
 
