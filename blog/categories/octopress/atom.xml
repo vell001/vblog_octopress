@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Octopress | VBlog]]></title>
+  <link href="http://vblog.vell001.ml/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://vblog.vell001.ml/"/>
+  <updated>2014-03-23T23:10:20+08:00</updated>
+  <id>http://vblog.vell001.ml/</id>
+  <author>
+    <name><![CDATA[VellBibi]]></name>
+    <email><![CDATA[vell001@qq.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Some_problem_with_octopress]]></title>
+    <link href="http://vblog.vell001.ml/2014/03/23/some-problem-with-octopress.html"/>
+    <updated>2014-03-23T22:13:05+08:00</updated>
+    <id>http://vblog.vell001.ml/2014/03/23/some-problem-with-octopress</id>
+    <content type="html"><![CDATA[<h3>我使用octopress时遇到的问题汇总：</h3>
+
+<ul>
+<li><code>Error: Permission denied (publickey)</code></li>
+</ul>
+
+
+<p><strong>说明：</strong>我第一次使用<code>rake deploy</code>命令，总是有一个错误，提示说<code>Error: Permission denied (publickey)</code>, 我开始没注意，后来才看见了，原来是我电脑还没有设置publickey</p>
+
+<p><strong>解决：</strong></p>
+
+<blockquote><ol>
+<li>生成一个publickey:<code>ssh-keygen -lf ~/.ssh/id_rsa.pub</code></li>
+<li>在github上添加publickey，详情：<a href="https://help.github.com/articles/error-permission-denied-publickey">github-help</a></li>
+</ol>
+</blockquote>
+
+<ul>
+<li><code>octopress/plugins/pygments_code.rb:27:in 'rescue in pygments': Pygments can't parse unknown language: cpp. (RuntimeError)</code></li>
+</ul>
+
+
+<p><strong>说明：</strong>在我以为成功安装完<em>pygments</em>后，再使用<code>rake deploy</code>命令时就出现这个错误，同样，我也没注意，折腾了半天，连post都不能更新了，郁闷了半天，后面发现我的<em>pygments</em>压根就没安装成功</p>
+
+<p><strong>解决：</strong>这个问题已经很明确了，只要成功安装<em>pygments</em>就行了，接下来就是安装<em>pygments</em>的问题了</p>
+
+<ul>
+<li><code>Traceback (most recent call last):
+File "/usr/bin/pycompile", line 36, in &lt;module&gt;
+  from debpython.version import SUPPORTED, debsorted, vrepr, \
+File "/usr/share/python/debpython/version.py", line 24, in &lt;module&gt;
+  from ConfigParser import SafeConfigParser
+ImportError: No module named 'ConfigParser'</code></li>
+</ul>
+
+
+<p><strong>说明：</strong>提示没有找到<em>ConfigParser</em>这个模块，果断google了下发现，我的ubuntu前几天刚升级了python3，结果<em>ConfigParser</em>这个模块在python3下是<em>configparser</em></p>
+
+<p><strong>解决：</strong>这个问题简单，要么改代码，要么换python2，我电脑上还有python2，直接替换下python3，再次安装pygments就成功了，再次使用<code>rake deploy</code>就OK了，octopress已经在我的ubuntu上完美运行了</p>
+]]></content>
+  </entry>
+  
+</feed>
