@@ -33,3 +33,17 @@ ImportError: No module named 'ConfigParser' ```
 **说明：**提示没有找到*ConfigParser*这个模块，果断google了下发现，我的ubuntu前几天刚升级了python3，结果*ConfigParser*这个模块在python3下是*configparser*
 
 **解决：**这个问题简单，要么改代码，要么换python2，我电脑上还有python2，直接替换下python3，再次安装pygments就成功了，再次使用```rake deploy```就OK了，octopress已经在我的ubuntu上完美运行了
+
+* ``` error: failed to push some refs to 'git@github.com:user_name/user_name.github.io.git'
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes (e.g. 'git pull') before pushing again.  See the
+'Note about fast-forwards' section of 'git push --help' for details.
+```
+**说明：**这个是git版本不一致导致的
+**解决：**如提示所说，只要git pull下就好了，具体操作：  
+1.先进入_deploy文件夹:``` cd _deploy ```  
+2.然后执行git pull:
+``` sh
+git pull git@github.com:user_name/user_name.github.io.git
+```  
+3.完了退出*_deploy*目录，再次```rake deploy```, OK~
