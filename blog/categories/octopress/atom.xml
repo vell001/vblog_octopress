@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | VBlog]]></title>
   <link href="http://vblog.vell001.ml/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://vblog.vell001.ml/"/>
-  <updated>2014-03-24T18:35:38+08:00</updated>
+  <updated>2014-03-24T18:37:12+08:00</updated>
   <id>http://vblog.vell001.ml/</id>
   <author>
     <name><![CDATA[VellBibi]]></name>
@@ -68,12 +68,12 @@ Merge the remote changes (e.g. 'git pull') before pushing again.  See the
 </code>
 <strong>说明：</strong>这个是git版本不一致导致的
 <strong>解决：</strong>如提示所说，只要git pull下就好了，具体操作：<br/>
-1.先进入_deploy文件夹:<code>cd _deploy</code><br/>
+1.先进入<em>deploy文件夹:<code>cd _deploy</code><br/>
 2.然后执行git pull:
 <code>sh
 git pull git@github.com:user_name/user_name.github.io.git
 </code><br/>
-3.完了再次<code>rake deploy</code>, OK~</li>
+3.完了退出*</em>deploy*目录，再次<code>rake deploy</code>, OK~</li>
 </ul>
 
 ]]></content>
