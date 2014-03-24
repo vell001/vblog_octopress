@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Python | VBlog]]></title>
+  <link href="http://vblog.vell001.ml/blog/categories/python/atom.xml" rel="self"/>
+  <link href="http://vblog.vell001.ml/"/>
+  <updated>2014-03-24T16:45:29+08:00</updated>
+  <id>http://vblog.vell001.ml/</id>
+  <author>
+    <name><![CDATA[VellBibi]]></name>
+    <email><![CDATA[vell001@qq.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Install_pygments]]></title>
+    <link href="http://vblog.vell001.ml/2014/03/24/install-pygments.html"/>
+    <updated>2014-03-24T16:21:22+08:00</updated>
+    <id>http://vblog.vell001.ml/2014/03/24/install-pygments</id>
+    <content type="html"><![CDATA[<p>安装Pygments语法高亮
+On OS X Leopard, Snow Leopard
+<code>sh
+$ sudo easy_install Pygments
+</code>
+Alternatively on OS X with MacPorts:
+<code>sh
+$ sudo port install python25 py25-pygments
+</code>
+On Archlinux
+<code>sh
+$ sudo pacman -S python-pygments
+</code>
+On Ubuntu and Debian:
+<code>sh
+$ sudo apt-get install python-pygments
+</code>
+On Fedora and CentOS:
+<code>sh
+$ sudo yum install python-pygments
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>
