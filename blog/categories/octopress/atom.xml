@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | VBlog]]></title>
   <link href="http://vblog.vell001.ml/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://vblog.vell001.ml/"/>
-  <updated>2014-03-24T16:45:29+08:00</updated>
+  <updated>2014-03-24T18:35:38+08:00</updated>
   <id>http://vblog.vell001.ml/</id>
   <author>
     <name><![CDATA[VellBibi]]></name>
@@ -59,6 +59,23 @@ ImportError: No module named 'ConfigParser'</code></li>
 <p><strong>说明：</strong>提示没有找到<em>ConfigParser</em>这个模块，果断google了下发现，我的ubuntu前几天刚升级了python3，结果<em>ConfigParser</em>这个模块在python3下是<em>configparser</em></p>
 
 <p><strong>解决：</strong>这个问题简单，要么改代码，要么换python2，我电脑上还有python2，直接替换下python3，再次安装pygments就成功了，再次使用<code>rake deploy</code>就OK了，octopress已经在我的ubuntu上完美运行了</p>
+
+<ul>
+<li><code>error: failed to push some refs to 'git@github.com:user_name/user_name.github.io.git'
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes (e.g. 'git pull') before pushing again.  See the
+'Note about fast-forwards' section of 'git push --help' for details.
+</code>
+<strong>说明：</strong>这个是git版本不一致导致的
+<strong>解决：</strong>如提示所说，只要git pull下就好了，具体操作：<br/>
+1.先进入_deploy文件夹:<code>cd _deploy</code><br/>
+2.然后执行git pull:
+<code>sh
+git pull git@github.com:user_name/user_name.github.io.git
+</code><br/>
+3.完了再次<code>rake deploy</code>, OK~</li>
+</ul>
+
 ]]></content>
   </entry>
   
