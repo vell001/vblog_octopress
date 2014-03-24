@@ -1,5 +1,6 @@
 #!/bin/bash
 
-
 rake generate
 rake deploy
+
+sh push_source.sh
