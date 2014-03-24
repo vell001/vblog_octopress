@@ -4,7 +4,7 @@
 
 url: http://vblog.vell001.ml
 title: VBlog
-subtitle: A programmer's world
+subtitle: Welcome to vell001's world
 author: VellBibi
 simple_search: https://www.google.com/search
 description: Share something I know
@@ -17,7 +17,7 @@ date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: /atom.xml
-subscribe_email: vell001@qq.com
+subscribe_email: mailto:vell001@qq.com
 # RSS feeds can list your email address if you like
 email: vell001@qq.com
 

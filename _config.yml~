@@ -4,7 +4,7 @@
 
 url: http://vblog.vell001.ml
 title: VBlog
-subtitle: A programmer's world
+subtitle: Welcome to vell001's world
 author: VellBibi
 simple_search: https://www.google.com/search
 description: Share something I know
@@ -41,7 +41,7 @@ rdiscount:
     - smart
 pygments: true # default python pygments have been replaced by pygments.rb
 
-paginate: 10          # Posts per page on the blog index
+paginate: 5          # Posts per page on the blog index
 pagination_dir: / # Directory base for pagination URLs eg. /blog/page/2/
 recent_posts: 15       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
