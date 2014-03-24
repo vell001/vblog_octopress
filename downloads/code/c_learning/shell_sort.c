@@ -1,9 +1,11 @@
-#include <stdio.h>
+#include "vell001.h"
+
+#define NUM 20
 
 int* ShellSort(int* a, int n){
 	int i = 0, j = 0, d = n, cup = 0;
-	for(d=n/2; d>=1; d=d/2){
-		for(i=d; i<n; i++){
+	for(d=n/2; d>=1; d=d/2){ // 增量d为上次增量的一半，初始增量为总长度的一半
+		for(i=d; i<n; i++){ // 分出来的所有组进行插入排序
 			cup = a[i];
 			for(j=i-d; j>=0 && a[j]>cup; j=j-d){
 				a[j+d] = a[j];
@@ -14,27 +16,9 @@ int* ShellSort(int* a, int n){
 	return a;
 }
 
-int* GetRandomNum(int n) {
-	srand( (unsigned)time( NULL ) ); 
-	int* a = (int*)malloc(n * sizeof(int));
-	int i = 0;
-	for(i=0; i<n; i++) {
-		a[i] = rand() % n;
-	}
-	return a;
-}
-
-void PrintList(int* a, int n){
-	int i = 0;
-	for(i=0; i<n; i++){
-		printf("%d  ", a[i]);
-	}
-	printf("\n");
-}
-
 void main(){
-	int* a = GetRandomNum(15);
-	PrintList(a, 15);
-	ShellSort(a, 15);
-	PrintList(a, 15);
+	int* a = GetRandomNum(NUM);
+	PrintList(a, NUM);
+	ShellSort(a, NUM);
+	PrintList(a, NUM);
 }

@@ -1,10 +1,12 @@
-#include <stdio.h>
+#include "vell001.h"
+
+#define NUM 20
 
 int* BubbleSort(int* a, int n){
 	int i = 0, j = 0, flag = 1, cup = 0;
 	for(i=n-1; i>0 && flag; i--){
+		flag = 0; // 设置一个标记，当顺序已经排好后不再运行
 		for(j=0; j<i; j++){
-			flag = 0;
 			if(a[j] > a[j+1]){
 				cup = a[j];
 				a[j] = a[j+1];
@@ -17,11 +19,8 @@ int* BubbleSort(int* a, int n){
 }
 
 void main(){
-	int a[15] = {12,3,3,4,54,2,5,76,23,4,56,2,4,6,4};
-	int i = 0;
-	BubbleSort(a, 15);
-	for(i=0; i<15; i++){
-		printf("%d  ", a[i]);
-	}
-	printf("\n");
+	int* a = GetRandomNum(NUM);
+	PrintList(a, NUM);
+	BubbleSort(a, NUM);
+	PrintList(a, NUM);
 }
