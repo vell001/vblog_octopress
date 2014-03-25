@@ -29,6 +29,18 @@
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<!-- 为 markdown 的超链接加上 target=”_blank” -->
+<script type="text/javascript">
+function addBlankTargetForLinks () {
+  $('a[href^="http"]').each(function(){
+      $(this).attr('target', '_blank');
+  });
+}
+
+$(document).bind('DOMNodeInserted', function(event) {
+  addBlankTargetForLinks();
+});
+</script>
 
   
 
@@ -87,6 +99,9 @@
 
 
 <time datetime="2014-03-09T00:00:00+08:00" pubdate data-updated="true"></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://vblog.vell001.ml">Comments</a>
         
       </p>
     
@@ -237,6 +252,14 @@ I am so unlucky today. In the morning, I tried to fix my two motor on the <em>bo
 
 <p><embed src="http://www.tudou.com/v/83MhztKWNDM/&resourceId=99962045_05_02_99&tid=0/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed>
 2014/3/21 23:37:42</p>
+
+<p class='post-footer'>
+            原文地址:
+            <a href='http://vblog.vell001.ml/2014/03/09/vsim.html'>http://vblog.vell001.ml/2014/03/09/vsim.html</a><br/>
+            &nbsp;written by <a href='http://vblog.vell001.ml'>VellBibi</a>
+            &nbsp;posted at <a href='http://vblog.vell001.ml'>http://vblog.vell001.ml</a>
+            </p>
+
 </div>
 
 
@@ -298,6 +321,12 @@ I am so unlucky today. In the morning, I tried to fix my two motor on the <em>bo
 		<!-- UY END -->
 	</section>
 
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
 </div>
 
 <aside class="sidebar">
@@ -305,6 +334,10 @@ I am so unlucky today. In the morning, I tried to fix my two motor on the <em>bo
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2014/03/25/setup-myself-blog.html">Setup_myself_blog</a>
+      </li>
     
       <li class="post">
         <a href="/2014/03/24/some-sort-algorithms.html">Some_sort_algorithms</a>
@@ -334,19 +367,18 @@ I am so unlucky today. In the morning, I tried to fix my two motor on the <em>bo
         <a href="/2014/03/09/vsim.html">VSim [a Racing-simulator by Vell001]</a>
       </li>
     
-      <li class="post">
-        <a href="/2014/03/08/hello_world.html">Hello, Github Blog</a>
-      </li>
-    
   </ul>
 </section>
 <section>
-  <h1>Tag Cloud</h1>
-  <span id="tag-cloud"><a href='/categories/algorithm' style='font-size: 160.0%'>Algorithm(1)</a> <a href='/categories/c-c-' style='font-size: 160.0%'>C/c++(1)</a> <a href='/categories/github' style='font-size: 160.0%'>Github(1)</a> <a href='/categories/octopress' style='font-size: 160.0%'>Octopress(1)</a> <a href='/categories/python' style='font-size: 160.0%'>Python(1)</a> <a href='/categories/ruby' style='font-size: 160.0%'>Ruby(1)</a> <a href='/categories/ubuntu' style='font-size: 160.0%'>Ubuntu(1)</a> <a href='/categories/vsim' style='font-size: 160.0%'>Vsim(1)</a> </span>
+  <h1>Tags</h1>
+  <ul class="tag-cloud">
+<li><a style="font-size: NaN%" href="/tags/algorithm/">algorithm</a></li>
+
+  </ul>
 </section>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/categories/algorithm'>Algorithm (1)</a></li><li><a href='/categories/c-c-'>C/c++ (1)</a></li><li><a href='/categories/github'>Github (1)</a></li><li><a href='/categories/octopress'>Octopress (1)</a></li><li><a href='/categories/python'>Python (1)</a></li><li><a href='/categories/ruby'>Ruby (1)</a></li><li><a href='/categories/ubuntu'>Ubuntu (1)</a></li><li><a href='/categories/vsim'>Vsim (1)</a></li></ul>
+    <ul id="category-list"><li><a href='/categories/algorithm'>Algorithm (1)</a></li><li><a href='/categories/c-c-'>C/c++ (1)</a></li><li><a href='/categories/github'>Github (1)</a></li><li><a href='/categories/octopress'>Octopress (2)</a></li><li><a href='/categories/python'>Python (1)</a></li><li><a href='/categories/ruby'>Ruby (1)</a></li><li><a href='/categories/ubuntu'>Ubuntu (1)</a></li><li><a href='/categories/vsim'>Vsim (1)</a></li></ul>
 </section>
 
 
@@ -374,6 +406,22 @@ I am so unlucky today. In the morning, I tried to fix my two motor on the <em>bo
 
 </footer>
   
+
+<script type="text/javascript">
+      var disqus_shortname = 'vellblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://vblog.vell001.ml/2014/03/09/vsim.html';
+        var disqus_url = 'http://vblog.vell001.ml/2014/03/09/vsim.html';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
 
 
 

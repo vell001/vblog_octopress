@@ -4,13 +4,28 @@
   <title><![CDATA[VBlog]]></title>
   <link href="http://vblog.vell001.ml/atom.xml" rel="self"/>
   <link href="http://vblog.vell001.ml/"/>
-  <updated>2014-03-25T18:21:30+08:00</updated>
+  <updated>2014-03-25T19:41:28+08:00</updated>
   <id>http://vblog.vell001.ml/</id>
   <author>
     <name><![CDATA[VellBibi]]></name>
     <email><![CDATA[vell001@qq.com]]></email>
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Setup_myself_blog]]></title>
+    <link href="http://vblog.vell001.ml/2014/03/25/setup-myself-blog.html"/>
+    <updated>2014-03-25T19:26:50+08:00</updated>
+    <id>http://vblog.vell001.ml/2014/03/25/setup-myself-blog</id>
+    <content type="html"><![CDATA[<p class='post-footer'>
+            原文地址:
+            <a href='http://vblog.vell001.ml/2014/03/25/setup-myself-blog.html'>http://vblog.vell001.ml/2014/03/25/setup-myself-blog.html</a><br/>
+            &nbsp;written by <a href='http://vblog.vell001.ml'>VellBibi</a>
+            &nbsp;posted at <a href='http://vblog.vell001.ml'>http://vblog.vell001.ml</a>
+            </p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Some_sort_algorithms]]></title>
@@ -579,6 +594,14 @@
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p class='post-footer'>
+            原文地址:
+            <a href='http://vblog.vell001.ml/2014/03/24/some-sort-algorithms.html'>http://vblog.vell001.ml/2014/03/24/some-sort-algorithms.html</a><br/>
+            &nbsp;written by <a href='http://vblog.vell001.ml'>VellBibi</a>
+            &nbsp;posted at <a href='http://vblog.vell001.ml'>http://vblog.vell001.ml</a>
+            </p>
+
 ]]></content>
   </entry>
   
@@ -631,6 +654,14 @@ On Fedora and CentOS:</p>
 
 
 <p></p>
+
+<p class='post-footer'>
+            原文地址:
+            <a href='http://vblog.vell001.ml/2014/03/24/install-pygments.html'>http://vblog.vell001.ml/2014/03/24/install-pygments.html</a><br/>
+            &nbsp;written by <a href='http://vblog.vell001.ml'>VellBibi</a>
+            &nbsp;posted at <a href='http://vblog.vell001.ml'>http://vblog.vell001.ml</a>
+            </p>
+
 ]]></content>
   </entry>
   
@@ -677,6 +708,14 @@ On Fedora and CentOS:</p>
 
 
 <blockquote><p>参考至：<a href="http://ruby-china.org/wiki/rvm-guide">RubyChina</a></p></blockquote>
+
+<p class='post-footer'>
+            原文地址:
+            <a href='http://vblog.vell001.ml/2014/03/24/install-ruby.html'>http://vblog.vell001.ml/2014/03/24/install-ruby.html</a><br/>
+            &nbsp;written by <a href='http://vblog.vell001.ml'>VellBibi</a>
+            &nbsp;posted at <a href='http://vblog.vell001.ml'>http://vblog.vell001.ml</a>
+            </p>
+
 ]]></content>
   </entry>
   
@@ -750,6 +789,14 @@ On Fedora and CentOS:</p>
 
 
 <p>就行了</p>
+
+<p class='post-footer'>
+            原文地址:
+            <a href='http://vblog.vell001.ml/2014/03/24/ubuntu-pppoe.html'>http://vblog.vell001.ml/2014/03/24/ubuntu-pppoe.html</a><br/>
+            &nbsp;written by <a href='http://vblog.vell001.ml'>VellBibi</a>
+            &nbsp;posted at <a href='http://vblog.vell001.ml'>http://vblog.vell001.ml</a>
+            </p>
+
 ]]></content>
   </entry>
   
@@ -825,6 +872,14 @@ Merge the remote changes (e.g. &lsquo;git pull&rsquo;) before pushing again.  Se
 git pull git@github.com:user_name/user_name.github.io.git
 <code>  
 3.完了退出*_deploy*目录，再次</code>rake deploy&#8220;`, OK~</p>
+
+<p class='post-footer'>
+            原文地址:
+            <a href='http://vblog.vell001.ml/2014/03/23/some-problem-with-octopress.html'>http://vblog.vell001.ml/2014/03/23/some-problem-with-octopress.html</a><br/>
+            &nbsp;written by <a href='http://vblog.vell001.ml'>VellBibi</a>
+            &nbsp;posted at <a href='http://vblog.vell001.ml'>http://vblog.vell001.ml</a>
+            </p>
+
 ]]></content>
   </entry>
   
@@ -914,6 +969,14 @@ git pull git@github.com:user_name/user_name.github.io.git
 
 
 <p>2014/3/21 23:06:16</p>
+
+<p class='post-footer'>
+            原文地址:
+            <a href='http://vblog.vell001.ml/2014/03/21/c_learning.html'>http://vblog.vell001.ml/2014/03/21/c_learning.html</a><br/>
+            &nbsp;written by <a href='http://vblog.vell001.ml'>VellBibi</a>
+            &nbsp;posted at <a href='http://vblog.vell001.ml'>http://vblog.vell001.ml</a>
+            </p>
+
 ]]></content>
   </entry>
   
@@ -1066,6 +1129,14 @@ I am so unlucky today. In the morning, I tried to fix my two motor on the <em>bo
 
 <p><embed src="http://www.tudou.com/v/83MhztKWNDM/&resourceId=99962045_05_02_99&tid=0/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed>
 2014/3/21 23:37:42</p>
+
+<p class='post-footer'>
+            原文地址:
+            <a href='http://vblog.vell001.ml/2014/03/09/vsim.html'>http://vblog.vell001.ml/2014/03/09/vsim.html</a><br/>
+            &nbsp;written by <a href='http://vblog.vell001.ml'>VellBibi</a>
+            &nbsp;posted at <a href='http://vblog.vell001.ml'>http://vblog.vell001.ml</a>
+            </p>
+
 ]]></content>
   </entry>
   
@@ -1075,6 +1146,14 @@ I am so unlucky today. In the morning, I tried to fix my two motor on the <em>bo
     <updated>2014-03-08T00:00:00+08:00</updated>
     <id>http://vblog.vell001.ml/2014/03/08/hello_world</id>
     <content type="html"><![CDATA[<p>hello, I am using github to write a post, I am so exciting&hellip;</p>
+
+<p class='post-footer'>
+            原文地址:
+            <a href='http://vblog.vell001.ml/2014/03/08/hello_world.html'>http://vblog.vell001.ml/2014/03/08/hello_world.html</a><br/>
+            &nbsp;written by <a href='http://vblog.vell001.ml'>VellBibi</a>
+            &nbsp;posted at <a href='http://vblog.vell001.ml'>http://vblog.vell001.ml</a>
+            </p>
+
 ]]></content>
   </entry>
   
