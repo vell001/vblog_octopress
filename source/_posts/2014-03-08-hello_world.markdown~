@@ -1,10 +1,10 @@
 ---
 layout: post
 title: hello, github blog
+date: 2014-03-08 10:13:05 +0800
 comments: true
-categories: github
+categories: octopress
 ---
 
----------------------
-hello, I am using github to write a post, I am so exciting...
+hello, I am using octopress to write a post, I am so exciting...
 

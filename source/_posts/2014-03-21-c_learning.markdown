@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 复习C语言
+date: 2014-03-21 22:13:05 +0800
 comments: true
 categories: C/C++
 ---
