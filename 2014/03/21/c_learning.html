@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>复习C语言 - VBlog</title>
+  <meta name="author" content="VellBibi">
+
+  
+  <meta name="description" content="今天突然有感觉复习下C语言了，发现已经好久没有用过C编程了，话说最近都没有编过程序了都，趁现在还有点时间，好好学习下C了。话不多说上题目 请定义一个宏，比较两个数a、b的大小，不能使用大于、小于、if语句 分析：要不使用符号比较数的大小，第一个想到的应该是最原始的方法，就是数的二进制表示（ &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://vblog.vell001.ml/2014/03/21/c_learning.html">
+  <link href="/favicon.ico" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="VBlog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">VBlog</a></h1>
+  
+    <h2>Welcome to vell001's world</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss email">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+    <li><a href="mailto:vell001@qq.com" rel="subscribe-email" title="subscribe via email">Email</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:vblog.vell001.ml" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">复习C语言</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-21T00:00:00+08:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>今天突然有感觉复习下C语言了，发现已经好久没有用过C编程了，话说最近都没有编过程序了都，趁现在还有点时间，好好学习下C了。话不多说上题目</p>
+
+<hr />
+
+<blockquote><p>请定义一个宏，比较两个数a、b的大小，不能使用大于、小于、if语句</p>
+
+<p><strong>分析</strong>：要不使用符号比较数的大小，第一个想到的应该是最原始的方法，就是数的二进制表示（第一位为1表示这是一个负数），以及对二进制的操作</p>
+
+<p>步骤：</p>
+
+<blockquote><ol>
+<li>得到当前系统的位数：sizeof函数</li>
+<li>将1<strong>左移</strong>位数减一位得到一个最高位为1的二进制数，如: 0x10000000</li>
+<li>将两数之差和0x10000000相<strong>与</strong>，如果为1，说明差是负数。。。</li>
+</ol>
+</blockquote>
+
+<p>代码：</p></blockquote>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#include &lt;stdio.h&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">int</span> <span class="k">const</span> <span class="n">shift</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="o">*</span> <span class="mi">8</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="cp">#define max(a,b) ((((a)-(b))&amp;(1 &lt;&lt; shift))?b:a)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// test</span>
+</span><span class='line'><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="n">max</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span><span class="mi">3</span><span class="p">));</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2014/3/21 22:45:13</p>
+
+<hr />
+
+<blockquote><p>输出源文件的标题和目前执行行的行数</p>
+
+<p><strong>分析</strong>：掌握<strong>LINE</strong>和<strong>FILE</strong>这两个宏定义就行了</p>
+
+<p><strong>代码</strong>：</p></blockquote>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#include &lt;iostream&gt;</span>
+</span><span class='line'><span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="kt">int</span> <span class="n">line</span> <span class="o">=</span> <span class="n">__LINE__</span><span class="p">;</span>
+</span><span class='line'>  <span class="kt">char</span><span class="o">*</span> <span class="n">file</span> <span class="o">=</span> <span class="n">__FILE__</span><span class="p">;</span>
+</span><span class='line'>  <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;filename:&quot;</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">file</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;,line is &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">line</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2014/3/21 23:06:16</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">VellBibi</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-21T00:00:00+08:00" pubdate data-updated="true"></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/c-slash-c-plus-plus/'>C/C++</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2014/03/09/vsim.html" title="Previous Post: VSim [a racing-simulator by vell001]">&laquo; VSim [a racing-simulator by vell001]</a>
+      
+      
+        <a class="basic-alignment right" href="/2014/03/23/some-problem-with-octopress.html" title="Next Post: some_problem_with_octopress">some_problem_with_octopress &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+	<section>
+		<h1>Comments</h1>
+		<!-- UY BEGIN -->
+		<div id="uyan_frame"></div>
+		<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=1901967"></script>
+		<!-- UY END -->
+	</section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2014/03/24/some-sort-algorithms.html">Some_sort_algorithms</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2014/03/24/install-pygments.html">Install_pygments</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2014/03/24/install-ruby.html">Install_ruby</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2014/03/24/ubuntu-pppoe.html">Ubuntu_wifi&pppoe</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2014/03/23/some-problem-with-octopress.html">Some_problem_with_octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2014/03/21/c_learning.html">复习C语言</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2014/03/09/vsim.html">VSim [a Racing-simulator by Vell001]</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2014/03/08/hello_world.html">Hello, Github Blog</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/VellBibi?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - VellBibi 
+</p>
+
+</footer>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>

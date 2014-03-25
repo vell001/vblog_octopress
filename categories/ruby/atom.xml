@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ruby | VBlog]]></title>
+  <link href="http://vblog.vell001.ml/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://vblog.vell001.ml/"/>
+  <updated>2014-03-25T16:10:53+08:00</updated>
+  <id>http://vblog.vell001.ml/</id>
+  <author>
+    <name><![CDATA[VellBibi]]></name>
+    <email><![CDATA[vell001@qq.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Install_ruby]]></title>
+    <link href="http://vblog.vell001.ml/2014/03/24/install-ruby.html"/>
+    <updated>2014-03-24T13:24:05+08:00</updated>
+    <id>http://vblog.vell001.ml/2014/03/24/install-ruby</id>
+    <content type="html"><![CDATA[<h3>Install rvm</h3>
+
+<p><code>
+$ curl -L get.rvm.io | bash -s stable
+$ source ~/.bashrc
+$ source ~/.bash_profile
+</code></p>
+
+<h3>修改 RVM 的 Ruby 安装源到淘宝</h3>
+
+<p><code>
+$ sed -i -e 's/ftp\.ruby-lang\.org\/pub\/ruby/ruby\.taobao\.org\/mirrors\/ruby/g' ~/.rvm/config/db
+</code></p>
+
+<h3>Install ruby 1.9.3</h3>
+
+<p><code>
+rvm install 1.9.3
+</code></p>
+
+<h3>使用 ruby 1.9.3</h3>
+
+<p><code>
+rvm use 1.9.3
+</code></p>
+
+<h3>设置默认ruby</h3>
+
+<p><code>
+rvm use 1.9.3 --default
+</code></p>
+
+<blockquote><p>参考至：<a href="http://ruby-china.org/wiki/rvm-guide">RubyChina</a></p></blockquote>
+]]></content>
+  </entry>
+  
+</feed>

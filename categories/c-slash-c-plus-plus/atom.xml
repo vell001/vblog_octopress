@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: C/C++ | VBlog]]></title>
+  <link href="http://vblog.vell001.ml/categories/c-slash-c-plus-plus/atom.xml" rel="self"/>
+  <link href="http://vblog.vell001.ml/"/>
+  <updated>2014-03-25T16:10:53+08:00</updated>
+  <id>http://vblog.vell001.ml/</id>
+  <author>
+    <name><![CDATA[VellBibi]]></name>
+    <email><![CDATA[vell001@qq.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[复习C语言]]></title>
+    <link href="http://vblog.vell001.ml/2014/03/21/c_learning.html"/>
+    <updated>2014-03-21T00:00:00+08:00</updated>
+    <id>http://vblog.vell001.ml/2014/03/21/c_learning</id>
+    <content type="html"><![CDATA[<p>今天突然有感觉复习下C语言了，发现已经好久没有用过C编程了，话说最近都没有编过程序了都，趁现在还有点时间，好好学习下C了。话不多说上题目</p>
+
+<hr />
+
+<blockquote><p>请定义一个宏，比较两个数a、b的大小，不能使用大于、小于、if语句</p>
+
+<p><strong>分析</strong>：要不使用符号比较数的大小，第一个想到的应该是最原始的方法，就是数的二进制表示（第一位为1表示这是一个负数），以及对二进制的操作</p>
+
+<p>步骤：</p>
+
+<blockquote><ol>
+<li>得到当前系统的位数：sizeof函数</li>
+<li>将1<strong>左移</strong>位数减一位得到一个最高位为1的二进制数，如: 0x10000000</li>
+<li>将两数之差和0x10000000相<strong>与</strong>，如果为1，说明差是负数。。。</li>
+</ol>
+</blockquote>
+
+<p>代码：
+``` c</p>
+
+<h1>include &lt;stdio.h></h1></blockquote>
+
+<p>int const shift = sizeof(int) * 8 &ndash; 1;</p>
+
+<h1>define max(a,b) ((((a)&ndash;(b))&amp;(1 &lt;&lt; shift))?b:a)</h1>
+
+<p>// test
+void main()
+{</p>
+
+<pre><code>printf("%d", max(23,3));
+</code></pre>
+
+<p>}
+```
+2014/3/21 22:45:13</p>
+
+<hr />
+
+<blockquote><p>输出源文件的标题和目前执行行的行数</p>
+
+<p><strong>分析</strong>：掌握<strong>LINE</strong>和<strong>FILE</strong>这两个宏定义就行了</p>
+
+<p><strong>代码</strong>：
+``` c</p>
+
+<h1>include <iostream></h1>
+
+<p>using namespace std;</p></blockquote>
+
+<p>int main()
+{</p>
+
+<pre><code>int line = __LINE__;
+char* file = __FILE__;
+cout &lt;&lt; "filename:" &lt;&lt; (file) &lt;&lt; ",line is " &lt;&lt; line &lt;&lt; endl;
+return 0;
+</code></pre>
+
+<p>}
+```
+2014/3/21 23:06:16</p>
+]]></content>
+  </entry>
+  
+</feed>
