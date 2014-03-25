@@ -98,7 +98,7 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: 
+disqus_short_name: vellblog
 disqus_show_comment_count: true
 
 # Google Analytics
@@ -106,3 +106,11 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false
+
+#MetaWeblog:
+MetaWeblog:
+   Cnblogs:
+      MetaWeblog_username: VellBibi
+      MetaWeblog_url: http://www.cnblogs.com/VellBibi/services/metaweblog.aspx
+      MetaWeblog_blogid: 001
+
