@@ -3,3 +3,10 @@
 
 // post_foot_copyright
 .post-footer{margin-top:10px;padding:5px;background:none repeat scroll 0pt 0pt #eee;font-size:90%;color:gray}
+
+// tag cloud
+#content article .cloud li{
+    display: inline;
+    list-style: none outside none;
+    padding: 0 4px;
+}

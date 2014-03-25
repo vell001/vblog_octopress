@@ -68,7 +68,7 @@ module MetaWeblogSync
       paths.shift
       
       paths.map {|path| 
-        path = File.expand_path(File.dirname(__FILE__) + '/../public' + path['href']) + '/index.html'
+        path = File.expand_path(File.dirname(__FILE__) + '/../public' + path['href']) #+ '/index.html'
       }
     end
 

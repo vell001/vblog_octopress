@@ -1,31 +1,22 @@
 # encoding: utf-8
-# Based on https://gist.github.com/1577100 
-# Syntax:
-# -------
+#
+# Octopress tag cloud generator
+#
+# Version: 0.3
+#
+# Copyright (c) 2012 Robby Edwards, http://robbyedwards.com/
+# Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
+#
+# Octopress plugin to display tag clouds.
+# Based on https://gist.github.com/1577100 by @tokkonopapa
+#
+# Defines a 'tag_cloud' tag that is rendered by Liquid into a tag cloud:
+#
 #     <div class='cloud'>
 #         {% tag_cloud %}
 #     </div>
 #
-#     {% category_list [counter:true] %}
-# 
-# Example:
-# --------
-# In some template files, you can add the following markups.
-# 
-# ### source/_includes/custom/asides/category_list.html ###
-# 
-#     <section>
-#       <h1>Categories</h1>
-#         <ul id="category-list">{% category_list counter:true %}</ul>
-#     </section>
-# 
-# Notes:
-# ------
-# Be sure to insert above template files into `default_asides` array in `_config.yml`.
-# And also you can define styles for 'category-list' in a `.scss` file.
-# (ex: `sass/custom/_styles.scss`)
-#
-# 合并了两大tag_cloud插件
+# See README for installation and usage instructions.
 
 require 'stringex'
 
@@ -172,34 +163,6 @@ module Jekyll
 
   end
 
-  class CategoryList < Liquid::Tag
-
-    def initialize(tag_name, markup, tokens)
-      @opts = {}
-      if markup.strip =~ /\s*counter:(\w+)/iu
-        @opts['counter'] = $1
-        markup = markup.strip.sub(/counter:\w+/iu,'')
-      end
-      super
-    end
-
-    def render(context)
-      html = ""
-      config = context.registers[:site].config
-      category_dir = config['root'] + config['category_dir'] + '/'
-      categories = context.registers[:site].categories
-      categories.keys.sort_by{ |str| str.downcase }.each do |category|
-        url = category_dir + category.gsub(/_|\P{Word}/u, '-').gsub(/-{2,}/u, '-').downcase
-        html << "<li><a href='#{url}'>#{category.capitalize}"
-        if @opts['counter']
-          html << " (#{categories[category].count})"
-        end
-        html << "</a></li>"
-      end
-      html
-    end
-  end
 end
 
 Liquid::Template.register_tag('tag_cloud', Jekyll::TagCloud)
-Liquid::Template.register_tag('category_list', Jekyll::CategoryList)

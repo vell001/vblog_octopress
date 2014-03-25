@@ -92,7 +92,7 @@ module MetaWeblogSync
         path = post['href'] if(post.text == title)
       end
 
-      File.expand_path(File.dirname(__FILE__) + '/../public/' + path) + '/index.html'
+      File.expand_path(File.dirname(__FILE__) + '/../public' + path) + '/index.html'
     end
 
     def getHtmlBy path

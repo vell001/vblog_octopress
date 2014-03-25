@@ -3,8 +3,7 @@ layout: post
 title: "some_sort_algorithms"
 date: 2014-03-24 23:27:26 +0800
 comments: true
-categories: algorithm
-tags: algorithm/s
+categories: algorithm 
 ---
 复习下数据结构常用的排序算法，更多内容上[wiki](http://zh.wikipedia.org/wiki/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95)
 <a name="quicksort"/>
