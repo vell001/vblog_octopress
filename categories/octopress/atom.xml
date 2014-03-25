@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | VBlog]]></title>
   <link href="http://vblog.vell001.ml/categories/octopress/atom.xml" rel="self"/>
   <link href="http://vblog.vell001.ml/"/>
-  <updated>2014-03-25T22:37:57+08:00</updated>
+  <updated>2014-03-25T22:41:16+08:00</updated>
   <id>http://vblog.vell001.ml/</id>
   <author>
     <name><![CDATA[VellBibi]]></name>
@@ -79,6 +79,15 @@ git pull git@github.com:user_name/user_name.github.io.git
 3.完了退出*</em>deploy*目录，再次<code>rake deploy</code>, OK~</li>
 </ul>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hello, Octopress Blog]]></title>
+    <link href="http://vblog.vell001.ml/2014/03/08/hello_world.html"/>
+    <updated>2014-03-08T10:13:05+08:00</updated>
+    <id>http://vblog.vell001.ml/2014/03/08/hello_world</id>
+    <content type="html"><![CDATA[<p>hello, I am using octopress to write a post, I am so exciting&hellip;</p>
 ]]></content>
   </entry>
   
