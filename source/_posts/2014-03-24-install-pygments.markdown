@@ -14,6 +14,7 @@ Alternatively on OS X with MacPorts:
 ``` sh
 $ sudo port install python25 py25-pygments
 ``` 
+<!-- more -->
 On Archlinux
 ``` sh
 $ sudo pacman -S python-pygments

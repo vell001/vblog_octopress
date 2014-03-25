@@ -16,7 +16,7 @@ categories: octopress
 > 
 1. 生成一个publickey:```ssh-keygen -lf ~/.ssh/id_rsa.pub```
 2. 在github上添加publickey，详情：[github-help](https://help.github.com/articles/error-permission-denied-publickey)
-
+<!-- more -->
 * ``` octopress/plugins/pygments_code.rb:27:in 'rescue in pygments': Pygments can't parse unknown language: cpp. (RuntimeError) ```  
 
 **说明：**在我以为成功安装完*pygments*后，再使用```rake deploy```命令时就出现这个错误，同样，我也没注意，折腾了半天，连post都不能更新了，郁闷了半天，后面发现我的*pygments*压根就没安装成功

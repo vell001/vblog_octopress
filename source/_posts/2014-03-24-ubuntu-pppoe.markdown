@@ -14,6 +14,7 @@ sudo pppoeconf
 ```  
 ![pppoeconf](/images/20140324125533.png)
 一直按照提示进行，注意倒数第二个提示，提示你要不要开机自动拨号，这个选**no**，不要自动拨号，因为经测试多次，都会卡在开机界面60S```waiting up to 60 more seconds for network configuration```,当然也有好的解决方法，但还是麻烦了一点，开机后自己拨号不是更好？～
+<!-- more -->
 2. 这样基本就能上网了，可是如果你急着重启了的话就会有问题了，重启后会发现网络图标莫名其妙不见了！！！
 原因是：
 > pppoe的网络连接和network-manage的链接方式冲突  

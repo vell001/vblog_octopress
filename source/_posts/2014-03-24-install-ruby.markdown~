@@ -29,4 +29,4 @@ rvm use 1.9.3
 rvm use 1.9.3 --default 
 ```
 
-> 参考至：http://ruby-china.org/wiki/rvm-guide
+> 参考至：[RubyChina](http://ruby-china.org/wiki/rvm-guide)
