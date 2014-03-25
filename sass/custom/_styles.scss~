@@ -12,10 +12,11 @@
 }
 
 html {
-  background: #3b5998 url("../images/noise.png");
+  background: #555 url("../images/noise.png");
 }
 
-body > div > div { //文章内容
+//文章内容
+body > div > div { 
   background-image: url("../images/paper.png");
 }
 

@@ -8,14 +8,15 @@
 #content article .cloud li{
     display: inline;
     list-style: none outside none;
-    padding: 0 4px;
+    padding: 20px 4px;
 }
 
 html {
   background: #555 url("../images/noise.png");
 }
 
-body > div > div { //文章内容
+//文章内容
+body > div > div { 
   background-image: url("../images/paper.png");
 }
 
