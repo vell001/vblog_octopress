@@ -3,13 +3,14 @@ layout: post
 title: "some_sort_algorithms"
 date: 2014-03-24 23:27:26 +0800
 comments: true
-categories: algorithm
+categories: algorithm quicksort
+tags: algorithm quicksort
 ---
 复习下数据结构常用的排序算法，更多内容上[wiki](http://zh.wikipedia.org/wiki/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95)
 <a name="quicksort"/>
 ## 快速排序（不稳定 O(n log n)）
 > 快速排序（Quicksort）是对冒泡排序的一种改进。由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。[百度百科](http://baike.baidu.com/view/19016.htm)
-
+<!-- more -->
 ### **C代码**:  
 {% include_code lang:c c_learning/quicksort.c %}
 ### **Java代码**:
