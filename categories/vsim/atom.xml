@@ -4,7 +4,7 @@
   <title><![CDATA[Category: VSim | VBlog]]></title>
   <link href="http://vblog.vell001.ml/categories/vsim/atom.xml" rel="self"/>
   <link href="http://vblog.vell001.ml/"/>
-  <updated>2014-03-25T16:10:53+08:00</updated>
+  <updated>2014-03-25T18:14:44+08:00</updated>
   <id>http://vblog.vell001.ml/</id>
   <author>
     <name><![CDATA[VellBibi]]></name>
@@ -31,6 +31,9 @@ My project is in progressing, I will update for every detail I finished. </p>
 
 <p>I am using two 12V DC truck wiper motors, bought in <em><a href="http://www.taobao.com">taobao</a></em>;
 The controller is <em><a href="http://www.arduino.cc">Arduino Uno</a></em>, and the motor driver is <em><a href="http://item.taobao.com/item.htm?id=16852136684">MotoMonster</a></em>(I don&rsquo;t do any advertising, this is an only one MotoMonster-driver I can find in taobao, I have no choice, so bought this one. Please give me a message if you find anthor driver, my email:<em><a href="mailto:vell001@qq.com">vell001@qq.com</a></em>, thanks.</p>
+
+<!-- more -->
+
 
 <p>Here are some pictures:</p>
 

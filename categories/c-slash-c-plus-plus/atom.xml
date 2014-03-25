@@ -4,7 +4,7 @@
   <title><![CDATA[Category: C/C++ | VBlog]]></title>
   <link href="http://vblog.vell001.ml/categories/c-slash-c-plus-plus/atom.xml" rel="self"/>
   <link href="http://vblog.vell001.ml/"/>
-  <updated>2014-03-25T16:10:53+08:00</updated>
+  <updated>2014-03-25T18:14:44+08:00</updated>
   <id>http://vblog.vell001.ml/</id>
   <author>
     <name><![CDATA[VellBibi]]></name>
@@ -24,9 +24,12 @@
 
 <blockquote><p>请定义一个宏，比较两个数a、b的大小，不能使用大于、小于、if语句</p>
 
-<p><strong>分析</strong>：要不使用符号比较数的大小，第一个想到的应该是最原始的方法，就是数的二进制表示（第一位为1表示这是一个负数），以及对二进制的操作</p>
+<p><strong>分析</strong>：要不使用符号比较数的大小，第一个想到的应该是最原始的方法，就是数的二进制表示（第一位为1表示这是一个负数），以及对二进制的操作</p></blockquote>
 
-<p>步骤：</p>
+<!-- more -->
+
+
+<blockquote><p>步骤：</p>
 
 <blockquote><ol>
 <li>得到当前系统的位数：sizeof函数</li>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | VBlog]]></title>
   <link href="http://vblog.vell001.ml/categories/ruby/atom.xml" rel="self"/>
   <link href="http://vblog.vell001.ml/"/>
-  <updated>2014-03-25T16:10:53+08:00</updated>
+  <updated>2014-03-25T18:14:44+08:00</updated>
   <id>http://vblog.vell001.ml/</id>
   <author>
     <name><![CDATA[VellBibi]]></name>
@@ -37,6 +37,9 @@ $ sed -i -e 's/ftp\.ruby-lang\.org\/pub\/ruby/ruby\.taobao\.org\/mirrors\/ruby/g
 <p><code>
 rvm install 1.9.3
 </code></p>
+
+<!-- more -->
+
 
 <h3>使用 ruby 1.9.3</h3>
 

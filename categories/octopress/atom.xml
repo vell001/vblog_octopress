@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | VBlog]]></title>
   <link href="http://vblog.vell001.ml/categories/octopress/atom.xml" rel="self"/>
   <link href="http://vblog.vell001.ml/"/>
-  <updated>2014-03-25T16:10:53+08:00</updated>
+  <updated>2014-03-25T18:14:44+08:00</updated>
   <id>http://vblog.vell001.ml/</id>
   <author>
     <name><![CDATA[VellBibi]]></name>
@@ -36,6 +36,9 @@
 <li>在github上添加publickey，详情：<a href="https://help.github.com/articles/error-permission-denied-publickey">github-help</a></li>
 </ol>
 </blockquote>
+
+<!-- more -->
+
 
 <ul>
 <li><code>octopress/plugins/pygments_code.rb:27:in 'rescue in pygments': Pygments can't parse unknown language: cpp. (RuntimeError)</code></li>

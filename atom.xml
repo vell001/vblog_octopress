@@ -4,7 +4,7 @@
   <title><![CDATA[VBlog]]></title>
   <link href="http://vblog.vell001.ml/atom.xml" rel="self"/>
   <link href="http://vblog.vell001.ml/"/>
-  <updated>2014-03-25T16:10:53+08:00</updated>
+  <updated>2014-03-25T18:14:44+08:00</updated>
   <id>http://vblog.vell001.ml/</id>
   <author>
     <name><![CDATA[VellBibi]]></name>
@@ -23,6 +23,9 @@
 <h2>快速排序（不稳定 O(n log n)）</h2>
 
 <blockquote><p>快速排序（Quicksort）是对冒泡排序的一种改进。由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。<a href="http://baike.baidu.com/view/19016.htm">百度百科</a></p></blockquote>
+
+<!-- more -->
+
 
 <h3><strong>C代码</strong>:</h3>
 
@@ -599,8 +602,12 @@ On OS X Leopard, Snow Leopard</p>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>
-On Archlinux</p>
+<p></p>
+
+<!-- more -->
+
+
+<p>On Archlinux</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>sudo pacman -S python-pygments
@@ -654,6 +661,9 @@ On Fedora and CentOS:</p>
 </pre></td><td class='code'><pre><code class=''><span class='line'>rvm install 1.9.3</span></code></pre></td></tr></table></div></figure>
 
 
+<!-- more -->
+
+
 <h3>使用 ruby 1.9.3</h3>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -688,12 +698,19 @@ On Fedora and CentOS:</p>
 
 <p>
 <img src="http://vblog.vell001.ml/images/20140324125533.png" alt="pppoeconf" />
-一直按照提示进行，注意倒数第二个提示，提示你要不要开机自动拨号，这个选<strong>no</strong>，不要自动拨号，因为经测试多次，都会卡在开机界面60S<code>waiting up to 60 more seconds for network configuration</code>,当然也有好的解决方法，但还是麻烦了一点，开机后自己拨号不是更好？～
-2. 这样基本就能上网了，可是如果你急着重启了的话就会有问题了，重启后会发现网络图标莫名其妙不见了！！！
-原因是：</p>
+一直按照提示进行，注意倒数第二个提示，提示你要不要开机自动拨号，这个选<strong>no</strong>，不要自动拨号，因为经测试多次，都会卡在开机界面60S<code>waiting up to 60 more seconds for network configuration</code>,当然也有好的解决方法，但还是麻烦了一点，开机后自己拨号不是更好？～</p>
+
+<!-- more -->
+
+
+<ol>
+<li>这样基本就能上网了，可是如果你急着重启了的话就会有问题了，重启后会发现网络图标莫名其妙不见了！！！
+原因是：
 
 <blockquote><p>pppoe的网络连接和network-manage的链接方式冲突<br/>
-解决方法1：每次连接好pppoe后关机的话要先手动退出pppoe:</p></blockquote>
+解决方法1：每次连接好pppoe后关机的话要先手动退出pppoe:</p></blockquote></li>
+</ol>
+
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>sudo poff dsl-provider</span></code></pre></td></tr></table></div></figure>
@@ -760,6 +777,9 @@ On Fedora and CentOS:</p>
 </ol>
 </blockquote>
 
+<!-- more -->
+
+
 <ul>
 <li><code>octopress/plugins/pygments_code.rb:27:in 'rescue in pygments': Pygments can't parse unknown language: cpp. (RuntimeError)</code></li>
 </ul>
@@ -819,9 +839,12 @@ git pull git@github.com:user_name/user_name.github.io.git
 
 <blockquote><p>请定义一个宏，比较两个数a、b的大小，不能使用大于、小于、if语句</p>
 
-<p><strong>分析</strong>：要不使用符号比较数的大小，第一个想到的应该是最原始的方法，就是数的二进制表示（第一位为1表示这是一个负数），以及对二进制的操作</p>
+<p><strong>分析</strong>：要不使用符号比较数的大小，第一个想到的应该是最原始的方法，就是数的二进制表示（第一位为1表示这是一个负数），以及对二进制的操作</p></blockquote>
 
-<p>步骤：</p>
+<!-- more -->
+
+
+<blockquote><p>步骤：</p>
 
 <blockquote><ol>
 <li>得到当前系统的位数：sizeof函数</li>
@@ -912,6 +935,9 @@ My project is in progressing, I will update for every detail I finished. </p>
 
 <p>I am using two 12V DC truck wiper motors, bought in <em><a href="http://www.taobao.com">taobao</a></em>;
 The controller is <em><a href="http://www.arduino.cc">Arduino Uno</a></em>, and the motor driver is <em><a href="http://item.taobao.com/item.htm?id=16852136684">MotoMonster</a></em>(I don&rsquo;t do any advertising, this is an only one MotoMonster-driver I can find in taobao, I have no choice, so bought this one. Please give me a message if you find anthor driver, my email:<em><a href="mailto:vell001@qq.com">vell001@qq.com</a></em>, thanks.</p>
+
+<!-- more -->
+
 
 <p>Here are some pictures:</p>
 

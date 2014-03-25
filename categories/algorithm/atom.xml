@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Algorithm | VBlog]]></title>
   <link href="http://vblog.vell001.ml/categories/algorithm/atom.xml" rel="self"/>
   <link href="http://vblog.vell001.ml/"/>
-  <updated>2014-03-25T16:10:53+08:00</updated>
+  <updated>2014-03-25T18:14:44+08:00</updated>
   <id>http://vblog.vell001.ml/</id>
   <author>
     <name><![CDATA[VellBibi]]></name>
@@ -24,6 +24,9 @@
 <h2>快速排序（不稳定 O(n log n)）</h2>
 
 <blockquote><p>快速排序（Quicksort）是对冒泡排序的一种改进。由C. A. R. Hoare在1962年提出。它的基本思想是：通过一趟排序将要排序的数据分割成独立的两部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。<a href="http://baike.baidu.com/view/19016.htm">百度百科</a></p></blockquote>
+
+<!-- more -->
+
 
 <h3><strong>C代码</strong>:</h3>
 
