@@ -3,3 +3,55 @@
 
 // post_foot_copyright
 .post-footer{margin-top:10px;padding:5px;background:none repeat scroll 0pt 0pt #eee;font-size:90%;color:gray}
+
+// tag cloud
+#content article .cloud li{
+    display: inline;
+    list-style: none outside none;
+    padding: 0 4px;
+}
+
+html {
+  background: #3b5998 url("../images/noise.png");
+}
+
+body > div > div { //文章内容
+  background-image: url("../images/paper.png");
+}
+
+//博客的Header区域
+html {
+  body > header {
+    background: none;
+    padding: 1.6em 0 1em 0;
+    h1 {
+      @include text-shadow(0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135);
+    }
+    h2 {
+      margin-top: .5em;
+      color: #E2D4D4;
+    }
+  }
+}
+
+//倒圆角处理
+@media only screen and (min-width: 1040px) {
+  body > nav {
+    @include border-top-radius(.4em);
+  }
+
+  body > footer {
+    @include border-bottom-radius(.4em);
+  }
+}
+
+//侧边栏
+body > div > div > aside.sidebar {
+  section a {
+    padding: 1px;
+    text-decoration: none;
+  }
+  &:hover a {
+    color: #4b4b4b;
+  }
+}
