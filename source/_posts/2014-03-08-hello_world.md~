@@ -1,0 +1,11 @@
+---
+layout: post
+title: hello, github blog
+comments: true
+categories: C/C++
+---
+
+{{ page.title }}
+---------------------
+hello, I am using github to write a post, I am so exciting...
+{{ page.date | date_to_string }}

@@ -1,0 +1,9 @@
+---
+layout: post
+title: hello, github blog
+comments: true
+categories: github
+---
+
+hello, I am using github to write a post, I am so exciting...
+
