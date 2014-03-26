@@ -1,7 +1,7 @@
 ---
 layout: post
 title: VSim [a racing-simulator by vell001]
-date: 2014-03-08 12:13:05 +0800
+date: 2014-03-09 12:13:05 +0800
 comments: true
 categories: VSim
 ---
@@ -126,3 +126,8 @@ I'll talk about some details later. I want to put my test video here now:
 
 <embed src="http://www.tudou.com/v/83MhztKWNDM/&resourceId=99962045_05_02_99&tid=0/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="480" height="400"></embed>
 2014/3/21 23:37:42 
+
+---------------
+Today is a dark day for me. My *MonsterDriver* was completely broken! Bad Luck~ It's my mistake, last time I found my motor's power wire is connected to it's shell. When I powered *MonsterDriver* on, just like *ShortCircuit*, my *MonsterDriver* was burned(not completely broken). And then I thinked I had solved this problem, I fixed my motor on a *wood board*. I was too careless, I didn't notice that my two motor connected together through the upper frame!!!~~~This time my *MonsterDriver* was completely broken! I don't know why that my *MonsterDriver* only supply a positive voltage, in other words, the motor only can go forward. Very Very Sad!!! I must be more careful in future.  
+Some good news, I got a second hand seat, and finished all installations of the upper frame, In other words, my simulator just leaves the matter of the *motor driver* module. 
+2014-03-26 22:21:24
