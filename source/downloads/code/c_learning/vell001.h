@@ -12,6 +12,15 @@ int* GetRandomNum(int n) {
 	return a;
 }
 
+int* GetOrderedNum(int n) {
+	int* a = (int*)malloc(n * sizeof(int));
+	int i = 0;
+	for(i=0; i<n; i++) {
+		a[i] = i;
+	}
+	return a;
+}
+
 // 打印数组
 void PrintList(int* a, int n){
 	int i = 0;
