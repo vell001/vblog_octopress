@@ -1,0 +1,16 @@
+#include "vell001.h"
+
+// 使用与符号交换
+void swap_1(int* a, int* b){
+	
+}
+
+// 使用加减运算符交换
+void swap_2(int* a, int* b){
+	
+}
+
+void main(){
+	int a=1, b=2;
+	printf("(a=%d, b=%d)", a, b);
+}
