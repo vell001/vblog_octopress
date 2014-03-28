@@ -190,6 +190,68 @@ $(document).bind('DOMNodeInserted', function(event) {
 
 <p>2014/3/21 23:06:16</p>
 
+<hr />
+
+<blockquote><p>不使用多余变量实现两个数的交换</p>
+
+<p><strong>分析</strong>：1)使用<code>^</code>符号，2)使用<code>+/-</code>符号</p>
+
+<p><strong>代码</strong>：</p></blockquote>
+
+<figure class='code'><figcaption><span> (swap.c)</span> <a href='/downloads/code/c_learning/swap.c'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#include &quot;vell001.h&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// 使用与符号交换</span>
+</span><span class='line'><span class="kt">void</span> <span class="nf">swap_1</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">b</span><span class="p">){</span>
+</span><span class='line'>  <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="o">*</span><span class="n">a</span> <span class="o">^</span> <span class="o">*</span><span class="n">b</span><span class="p">;</span>
+</span><span class='line'>  <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="o">*</span><span class="n">a</span> <span class="o">^</span> <span class="o">*</span><span class="n">b</span><span class="p">;</span>
+</span><span class='line'>  <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="o">*</span><span class="n">a</span> <span class="o">^</span> <span class="o">*</span><span class="n">b</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// 使用加减运算符交换</span>
+</span><span class='line'><span class="kt">void</span> <span class="nf">swap_2</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="n">b</span><span class="p">){</span>
+</span><span class='line'>  <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="o">*</span><span class="n">b</span><span class="p">;</span>
+</span><span class='line'>  <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="o">*</span><span class="n">a</span> <span class="o">-</span> <span class="o">*</span><span class="n">b</span><span class="p">;</span>
+</span><span class='line'>  <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="o">*</span><span class="n">a</span> <span class="o">-</span> <span class="o">*</span><span class="n">b</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">void</span> <span class="nf">main</span><span class="p">(){</span>
+</span><span class='line'>  <span class="kt">int</span> <span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+</span><span class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;(a=%d, b=%d)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+</span><span class='line'>  <span class="n">swap_1</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+</span><span class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;(a=%d, b=%d)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+</span><span class='line'>  <span class="n">swap_2</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+</span><span class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;(a=%d, b=%d)</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2014-03-28 21:21:33</p>
+
 <p class='post-footer'>
             原文地址:
             <a href='http://vblog.vell001.ml/2014/03/21/c_learning.html'>http://vblog.vell001.ml/2014/03/21/c_learning.html</a><br/>

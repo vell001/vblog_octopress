@@ -7,9 +7,9 @@ int BinarySearch(int* a, int low, int high, int key){
 	if(low > high) return -1;
 	// 算出中间位置
 	int mid = (low + high) / 2;
-	 
+
 	if(key > a[mid]){
-		return BinarySearch(a, mid + 1, high, key); 
+		return BinarySearch(a, mid + 1, high, key);
 	} else if(key < a[mid]){
 		return BinarySearch(a, low, mid - 1, key);
 	} else return mid;
