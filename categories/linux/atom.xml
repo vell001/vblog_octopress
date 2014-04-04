@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | VBlog]]></title>
   <link href="http://vblog.vell001.ml/categories/linux/atom.xml" rel="self"/>
   <link href="http://vblog.vell001.ml/"/>
-  <updated>2014-04-05T00:47:58+08:00</updated>
+  <updated>2014-04-05T01:03:30+08:00</updated>
   <id>http://vblog.vell001.ml/</id>
   <author>
     <name><![CDATA[VellBibi]]></name>
@@ -30,6 +30,9 @@ centos里面没有默认的sudo用户,在ubuntu里面就有，没有就自己添
 <h3>添加超级用户权限</h3>
 
 <blockquote><p><code>vim /etc/sudoers</code>找到<code>root ALL=(ALL) ALL</code>这一行，在这行下添加一行：<code>username ALL=(ALL) ALL</code></p></blockquote>
+
+<!-- more -->
+
 
 <h3>sudo命令的时候都提示你输入根密码</h3>
 
