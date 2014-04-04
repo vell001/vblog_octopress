@@ -3,7 +3,7 @@ layout: post
 title: "在linux上安装octopress博客环境"
 date: 2014-04-04 19:24:05 +0800
 comments: true
-categories: linux octopress
+categories: linux centos octopress
 ---
 > 说明：我之前已经在ubuntu上部署安装过octopress，现在是把环境搬到centos上，本教程适合已经成功安装过octopress的纯屌丝！[更多教程上官网看吧](http://octopress.org/docs)  
 
