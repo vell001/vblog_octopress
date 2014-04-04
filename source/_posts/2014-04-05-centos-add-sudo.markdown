@@ -16,7 +16,7 @@ sudo简介
 ---------------------
 ###添加超级用户权限
 > ```vim /etc/sudoers```找到```root ALL=(ALL) ALL```这一行，在这行下添加一行：```username ALL=(ALL) ALL```
-
+<!-- more -->
 ###sudo命令的时候都提示你输入根密码
 > 找到```#%wheel ALL=(ALL) ALL```这一行，去除前面的注释符```#```就行了
 
@@ -32,3 +32,5 @@ usermod -G wheel username
 ```
 
 #OK了。。。
+
+
