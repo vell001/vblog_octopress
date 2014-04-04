@@ -4,13 +4,59 @@
   <title><![CDATA[VBlog]]></title>
   <link href="http://vblog.vell001.ml/atom.xml" rel="self"/>
   <link href="http://vblog.vell001.ml/"/>
-  <updated>2014-04-05T00:19:09+08:00</updated>
+  <updated>2014-04-05T00:47:58+08:00</updated>
   <id>http://vblog.vell001.ml/</id>
   <author>
     <name><![CDATA[VellBibi]]></name>
     <email><![CDATA[vell001@qq.com]]></email>
   </author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Centos添加sudo用户]]></title>
+    <link href="http://vblog.vell001.ml/2014/04/05/centos-add-sudo.html"/>
+    <updated>2014-04-05T00:22:48+08:00</updated>
+    <id>http://vblog.vell001.ml/2014/04/05/centos-add-sudo</id>
+    <content type="html"><![CDATA[<h2>sudo简介</h2>
+
+<blockquote><p>给不是root用户提供一个方便的超级使用权限,例如:<code>sudo vim</code>
+centos里面没有默认的sudo用户,在ubuntu里面就有，没有就自己添加呗，没啥大不了的，还能学到点东西吧</p>
+
+<p>sudo的配置文件在：<code>/etc/sudoers</code>,需要先切换到root用户才能操作</p></blockquote>
+
+<h2>配置文件</h2>
+
+<h3>添加超级用户权限</h3>
+
+<blockquote><p><code>vim /etc/sudoers</code>找到<code>root ALL=(ALL) ALL</code>这一行，在这行下添加一行：<code>username ALL=(ALL) ALL</code></p></blockquote>
+
+<h3>sudo命令的时候都提示你输入根密码</h3>
+
+<blockquote><p>找到<code>#%wheel ALL=(ALL) ALL</code>这一行，去除前面的注释符<code>#</code>就行了</p></blockquote>
+
+<h3>sudo时不要每次都输入密码</h3>
+
+<blockquote><p>找到<code>#%wheel ALL=(ALL)NOPASSWD:ALL</code>这一行，同样去除前面的注释符<code>#</code>就行了</p></blockquote>
+
+<p>这样配置文件就设置完成了</p>
+
+<h2>添加用户名到wheel用户组</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>usermod -G wheel username
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>OK了。。。<p class='post-footer'></h1>
+
+<pre><code>        原文地址:
+        &lt;a href='http://vblog.vell001.ml/2014/04/05/centos-add-sudo.html'&gt;http://vblog.vell001.ml/2014/04/05/centos-add-sudo.html&lt;/a&gt;&lt;br/&gt;
+        &amp;nbsp;written by &lt;a href='http://vblog.vell001.ml'&gt;VellBibi&lt;/a&gt;
+        &amp;nbsp;posted at &lt;a href='http://vblog.vell001.ml'&gt;http://vblog.vell001.ml&lt;/a&gt;
+        &lt;/p&gt;
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[在linux上安装octopress博客环境]]></title>
@@ -71,10 +117,10 @@
 
 
 <ul>
-<li>安装git环境（我的centos自带了）
+<li><p>安装git环境（我的centos自带了）</p>
 
 <blockquote><p>安装详见：<a href="http://git-scm.com/download/linux">Download Git for Linux and Unix</a></p></blockquote></li>
-<li>安装bundle</li>
+<li><p>安装bundle</p></li>
 </ul>
 
 
@@ -85,9 +131,8 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<pre><code>&gt; 在```bundle install```的时候可能会报错：```An error occurred while installing nokogiri (1.5.11), and Bundler cannot continue.```  
-&gt; 一般直接```gem install nokogiri -v '1.5.11'```就行了，如果还不行，[点我去官网](http://nokogiri.org/tutorials/installing_nokogiri.html)，我使用```sudo yum install -y gcc ruby-devel libxml2 libxml2-devel libxslt libxslt-devel```解决了这个问题。
-</code></pre>
+<blockquote><p>在<code>bundle install</code>的时候可能会报错：<code>An error occurred while installing nokogiri (1.5.11), and Bundler cannot continue.</code><br/>
+一般直接<code>gem install nokogiri -v '1.5.11'</code>就行了，如果还不行，<a href="http://nokogiri.org/tutorials/installing_nokogiri.html">点我去官网</a>，我使用<code>sudo yum install -y gcc ruby-devel libxml2 libxml2-devel libxslt libxslt-devel</code>解决了这个问题。</p></blockquote>
 
 <ul>
 <li><p>安装pygments(用于语法高亮)</p>

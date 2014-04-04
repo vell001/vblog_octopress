@@ -9,7 +9,7 @@
   <meta name="author" content="VellBibi">
 
   
-  <meta name="description" content="今天突然有感觉复习下C语言了，发现已经好久没有用过C编程了，话说最近都没有编过程序了都，趁现在还有点时间，好好学习下C了。话不多说上题目 请定义一个宏，比较两个数a、b的大小，不能使用大于、小于、if语句 分析：要不使用符号比较数的大小，第一个想到的应该是最原始的方法，就是数的二进制表示（ &hellip;">
+  <meta name="description" content="今天我总算是使用上了高大上的octopress了，不容易啊，现在我把之前的博客全部搬到了octopress上了，在github上办博客让我不用再担心流量和广告了！～～～爽啊 我使用octopress时遇到的问题汇总： Error: Permission denied (publickey) 说明： &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,67 @@ $(document).bind('DOMNodeInserted', function(event) {
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2014/03/23/some-problem-with-octopress.html">Some_problem_with_octopress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-23T22:13:05+08:00" pubdate data-updated="true">Mar 23<span>rd</span>, 2014</time>
+        
+           | <a href="/2014/03/23/some-problem-with-octopress.html#disqus_thread"
+             data-disqus-identifier="http://vblog.vell001.ml/2014/03/23/some-problem-with-octopress.html">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>今天我总算是使用上了高大上的octopress了，不容易啊，现在我把之前的博客全部搬到了octopress上了，在github上办博客让我不用再担心流量和广告了！～～～爽啊</h2>
+
+<h3>我使用octopress时遇到的问题汇总：</h3>
+
+<ul>
+<li><code>Error: Permission denied (publickey)</code></li>
+</ul>
+
+
+<p><strong>说明：</strong>我第一次使用<code>rake deploy</code>命令，总是有一个错误，提示说<code>Error: Permission denied (publickey)</code>, 我开始没注意，后来才看见了，原来是我电脑还没有设置publickey</p>
+
+<p><strong>解决：</strong></p>
+
+<blockquote><ol>
+<li>生成一个publickey:<code>ssh-keygen -lf ~/.ssh/id_rsa.pub</code></li>
+<li>在github上添加publickey，详情：<a href="https://help.github.com/articles/error-permission-denied-publickey">github-help</a></li>
+</ol>
+</blockquote>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/2014/03/23/some-problem-with-octopress.html">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -248,6 +309,10 @@ The controller is <em><a href="http://www.arduino.cc">Arduino Uno</a></em>, and 
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2014/04/05/centos-add-sudo.html">Centos添加sudo用户</a>
+      </li>
+    
+      <li class="post">
         <a href="/2014/04/04/install-octopress-linux.html">在linux上安装octopress博客环境</a>
       </li>
     
@@ -275,15 +340,11 @@ The controller is <em><a href="http://www.arduino.cc">Arduino Uno</a></em>, and 
         <a href="/2014/03/24/ubuntu-pppoe.html">Ubuntu_wifi&pppoe</a>
       </li>
     
-      <li class="post">
-        <a href="/2014/03/23/some-problem-with-octopress.html">Some_problem_with_octopress</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/categories/algorithm'>algorithm (3)</a></li><li><a href='/categories/c-c-'>C/C++ (1)</a></li><li><a href='/categories/hash'>hash (1)</a></li><li><a href='/categories/linux'>linux (1)</a></li><li><a href='/categories/octopress'>octopress (3)</a></li><li><a href='/categories/python'>python (1)</a></li><li><a href='/categories/ruby'>ruby (1)</a></li><li><a href='/categories/ubuntu'>ubuntu (1)</a></li><li><a href='/categories/vsim'>VSim (1)</a></li></ul>
+    <ul id="category-list"><li><a href='/categories/algorithm'>algorithm (3)</a></li><li><a href='/categories/c-c-'>C/C++ (1)</a></li><li><a href='/categories/centos'>centos (2)</a></li><li><a href='/categories/hash'>hash (1)</a></li><li><a href='/categories/linux'>linux (2)</a></li><li><a href='/categories/octopress'>octopress (3)</a></li><li><a href='/categories/python'>python (1)</a></li><li><a href='/categories/ruby'>ruby (1)</a></li><li><a href='/categories/ubuntu'>ubuntu (1)</a></li><li><a href='/categories/vsim'>VSim (1)</a></li></ul>
 </section>
 
 

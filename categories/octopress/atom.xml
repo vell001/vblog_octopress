@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | VBlog]]></title>
   <link href="http://vblog.vell001.ml/categories/octopress/atom.xml" rel="self"/>
   <link href="http://vblog.vell001.ml/"/>
-  <updated>2014-04-05T00:19:09+08:00</updated>
+  <updated>2014-04-05T00:47:58+08:00</updated>
   <id>http://vblog.vell001.ml/</id>
   <author>
     <name><![CDATA[VellBibi]]></name>
@@ -59,7 +59,7 @@ source ~/.bash_profile</p></blockquote></li>
 
 
 <ul>
-<li>安装git环境（我的centos自带了）
+<li><p>安装git环境（我的centos自带了）</p>
 
 <blockquote><p>安装详见：<a href="http://git-scm.com/download/linux">Download Git for Linux and Unix</a></p></blockquote></li>
 <li><p>安装bundle<br/>

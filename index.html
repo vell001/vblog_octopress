@@ -9,18 +9,8 @@
   <meta name="author" content="VellBibi">
 
   
-  <meta name="description" content="说明：我之前已经在ubuntu上部署安装过octopress，现在是把环境搬到centos上，本教程适合已经成功安装过octopress的纯屌丝！更多教程上官网看吧 安装全程 安装ruby环境（官网是1.9.3） 详见：Install_ruby 1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12 &hellip;">
+  <meta name="description" content="sudo简介 给不是root用户提供一个方便的超级使用权限,例如:sudo vim
+centos里面没有默认的sudo用户,在ubuntu里面就有，没有就自己添加呗，没啥大不了的，还能学到点东西吧 sudo的配置文件在：/etc/sudoers,需要先切换到root用户才能操作 配置文件 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -90,6 +80,82 @@ $(document).bind('DOMNodeInserted', function(event) {
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2014/04/05/centos-add-sudo.html">Centos添加sudo用户</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-05T00:22:48+08:00" pubdate data-updated="true">Apr 5<span>th</span>, 2014</time>
+        
+           | <a href="/2014/04/05/centos-add-sudo.html#disqus_thread"
+             data-disqus-identifier="http://vblog.vell001.ml/2014/04/05/centos-add-sudo.html">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>sudo简介</h2>
+
+<blockquote><p>给不是root用户提供一个方便的超级使用权限,例如:<code>sudo vim</code>
+centos里面没有默认的sudo用户,在ubuntu里面就有，没有就自己添加呗，没啥大不了的，还能学到点东西吧</p>
+
+<p>sudo的配置文件在：<code>/etc/sudoers</code>,需要先切换到root用户才能操作</p></blockquote>
+
+<h2>配置文件</h2>
+
+<h3>添加超级用户权限</h3>
+
+<blockquote><p><code>vim /etc/sudoers</code>找到<code>root ALL=(ALL) ALL</code>这一行，在这行下添加一行：<code>username ALL=(ALL) ALL</code></p></blockquote>
+
+<h3>sudo命令的时候都提示你输入根密码</h3>
+
+<blockquote><p>找到<code>#%wheel ALL=(ALL) ALL</code>这一行，去除前面的注释符<code>#</code>就行了</p></blockquote>
+
+<h3>sudo时不要每次都输入密码</h3>
+
+<blockquote><p>找到<code>#%wheel ALL=(ALL)NOPASSWD:ALL</code>这一行，同样去除前面的注释符<code>#</code>就行了</p></blockquote>
+
+<p>这样配置文件就设置完成了</p>
+
+<h2>添加用户名到wheel用户组</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>usermod -G wheel username
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>OK了。。。<p class='post-footer'></h1>
+
+<pre><code>        原文地址:
+        &lt;a href='http://vblog.vell001.ml/2014/04/05/centos-add-sudo.html'&gt;http://vblog.vell001.ml/2014/04/05/centos-add-sudo.html&lt;/a&gt;&lt;br/&gt;
+        &amp;nbsp;written by &lt;a href='http://vblog.vell001.ml'&gt;VellBibi&lt;/a&gt;
+        &amp;nbsp;posted at &lt;a href='http://vblog.vell001.ml'&gt;http://vblog.vell001.ml&lt;/a&gt;
+        &lt;/p&gt;
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -522,67 +588,6 @@ On OS X Leopard, Snow Leopard</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2014/03/23/some-problem-with-octopress.html">Some_problem_with_octopress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-03-23T22:13:05+08:00" pubdate data-updated="true">Mar 23<span>rd</span>, 2014</time>
-        
-           | <a href="/2014/03/23/some-problem-with-octopress.html#disqus_thread"
-             data-disqus-identifier="http://vblog.vell001.ml/2014/03/23/some-problem-with-octopress.html">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>今天我总算是使用上了高大上的octopress了，不容易啊，现在我把之前的博客全部搬到了octopress上了，在github上办博客让我不用再担心流量和广告了！～～～爽啊</h2>
-
-<h3>我使用octopress时遇到的问题汇总：</h3>
-
-<ul>
-<li><code>Error: Permission denied (publickey)</code></li>
-</ul>
-
-
-<p><strong>说明：</strong>我第一次使用<code>rake deploy</code>命令，总是有一个错误，提示说<code>Error: Permission denied (publickey)</code>, 我开始没注意，后来才看见了，原来是我电脑还没有设置publickey</p>
-
-<p><strong>解决：</strong></p>
-
-<blockquote><ol>
-<li>生成一个publickey:<code>ssh-keygen -lf ~/.ssh/id_rsa.pub</code></li>
-<li>在github上添加publickey，详情：<a href="https://help.github.com/articles/error-permission-denied-publickey">github-help</a></li>
-</ol>
-</blockquote>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/2014/03/23/some-problem-with-octopress.html">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/2/">&larr; Older</a>
@@ -596,6 +601,10 @@ On OS X Leopard, Snow Leopard</p>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2014/04/05/centos-add-sudo.html">Centos添加sudo用户</a>
+      </li>
     
       <li class="post">
         <a href="/2014/04/04/install-octopress-linux.html">在linux上安装octopress博客环境</a>
@@ -625,15 +634,11 @@ On OS X Leopard, Snow Leopard</p>
         <a href="/2014/03/24/ubuntu-pppoe.html">Ubuntu_wifi&pppoe</a>
       </li>
     
-      <li class="post">
-        <a href="/2014/03/23/some-problem-with-octopress.html">Some_problem_with_octopress</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/categories/algorithm'>algorithm (3)</a></li><li><a href='/categories/c-c-'>C/C++ (1)</a></li><li><a href='/categories/hash'>hash (1)</a></li><li><a href='/categories/linux'>linux (1)</a></li><li><a href='/categories/octopress'>octopress (3)</a></li><li><a href='/categories/python'>python (1)</a></li><li><a href='/categories/ruby'>ruby (1)</a></li><li><a href='/categories/ubuntu'>ubuntu (1)</a></li><li><a href='/categories/vsim'>VSim (1)</a></li></ul>
+    <ul id="category-list"><li><a href='/categories/algorithm'>algorithm (3)</a></li><li><a href='/categories/c-c-'>C/C++ (1)</a></li><li><a href='/categories/centos'>centos (2)</a></li><li><a href='/categories/hash'>hash (1)</a></li><li><a href='/categories/linux'>linux (2)</a></li><li><a href='/categories/octopress'>octopress (3)</a></li><li><a href='/categories/python'>python (1)</a></li><li><a href='/categories/ruby'>ruby (1)</a></li><li><a href='/categories/ubuntu'>ubuntu (1)</a></li><li><a href='/categories/vsim'>VSim (1)</a></li></ul>
 </section>
 
 
