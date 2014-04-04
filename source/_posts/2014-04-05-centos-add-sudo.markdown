@@ -3,7 +3,7 @@ layout: post
 title: "centos添加sudo用户"
 date: 2014-04-05 00:22:48 +0800
 comments: true
-categories:linux centos 
+categories: linux centos 
 ---
 sudo简介
 --------------------
