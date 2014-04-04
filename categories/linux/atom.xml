@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | VBlog]]></title>
   <link href="http://vblog.vell001.ml/categories/linux/atom.xml" rel="self"/>
   <link href="http://vblog.vell001.ml/"/>
-  <updated>2014-04-05T00:11:35+08:00</updated>
+  <updated>2014-04-05T00:17:59+08:00</updated>
   <id>http://vblog.vell001.ml/</id>
   <author>
     <name><![CDATA[VellBibi]]></name>
@@ -75,8 +75,11 @@ bundle install
 <blockquote><p><code>sudo yum install python-pygments</code><br/>
 更多详见：<a href="http://vblog.vell001.ml/2014/03/24/install-pygments.html">install-pygments</a>
 特别注意，你的python必须是2.x版本的，详情见：<a href="http://vblog.vell001.ml/2014/03/23/some-problem-with-octopress.html">some-problem-with-octopress</a></p></blockquote></li>
+<li><p>整个环境到此结束了，只要<code>source ~/.bash_profiles</code>就可以使用rake命令了。</p></li>
 </ul>
 
+
+<p>2014/4/5 0:15:58</p>
 ]]></content>
   </entry>
   
