@@ -7,6 +7,7 @@ FileUtils.mkdir_p(PYGMENTS_CACHE_DIR)
 
 module HighlightCode
   def highlight(str, lang)
+   # lang = 'ruby' if lang == 'sh'
     lang = 'ruby' if lang == 'ru'
     lang = 'objc' if lang == 'm'
     lang = 'perl' if lang == 'pl'
