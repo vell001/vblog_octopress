@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Linux | VBlog]]></title>
+  <link href="http://vblog.vell001.ml/categories/linux/atom.xml" rel="self"/>
+  <link href="http://vblog.vell001.ml/"/>
+  <updated>2014-04-05T00:11:35+08:00</updated>
+  <id>http://vblog.vell001.ml/</id>
+  <author>
+    <name><![CDATA[VellBibi]]></name>
+    <email><![CDATA[vell001@qq.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[在linux上安装octopress博客环境]]></title>
+    <link href="http://vblog.vell001.ml/2014/04/04/install-octopress-linux.html"/>
+    <updated>2014-04-04T19:24:05+08:00</updated>
+    <id>http://vblog.vell001.ml/2014/04/04/install-octopress-linux</id>
+    <content type="html"><![CDATA[<blockquote><p>说明：我之前已经在ubuntu上部署安装过octopress，现在是把环境搬到centos上，本教程适合已经成功安装过octopress的纯屌丝！<a href="http://octopress.org/docs">更多教程上官网看吧</a></p></blockquote>
+
+<h2>安装全程</h2>
+
+<ul>
+<li>安装ruby环境（官网是1.9.3）
+
+<blockquote><p>详见：<a href="http://vblog.vell001.ml/2014/03/24/install-ruby.html">Install_ruby</a><br/>
+``` sh</p>
+
+<h1>!/bin/bash</h1>
+
+<h1>install rvm</h1>
+
+<p>curl -L get.rvm.io | bash -s stable
+source ~/.bashrc
+source ~/.bash_profile</p></blockquote></li>
+</ul>
+
+
+<h1>修改 RVM 的 Ruby 安装源到淘宝</h1>
+
+<p>sed -i -e &rsquo;s/ftp.ruby-lang.org\/pub\/ruby/ruby.taobao.org\/mirrors\/ruby/g' ~/.rvm/config/db</p>
+
+<h1>Install ruby 1.9.3</h1>
+
+<p>rvm install 1.9.3</p>
+
+<h1>使用 ruby 1.9.3</h1>
+
+<p>rvm use 1.9.3</p>
+
+<h1>设置默认ruby</h1>
+
+<p>rvm use 1.9.3 &mdash;default
+```</p>
+
+<!-- more -->
+
+
+<ul>
+<li>安装git环境（我的centos自带了）
+
+<blockquote><p>安装详见：<a href="http://git-scm.com/download/linux">Download Git for Linux and Unix</a></p></blockquote></li>
+<li><p>安装bundle<br/>
+<code>sh
+gem install bundler
+bundle install
+</code></p>
+
+<blockquote><p>在<code>bundle install</code>的时候可能会报错：<code>An error occurred while installing nokogiri (1.5.11), and Bundler cannot continue.</code><br/>
+一般直接<code>gem install nokogiri -v '1.5.11'</code>就行了，如果还不行，<a href="http://nokogiri.org/tutorials/installing_nokogiri.html">点我去官网</a>，我使用<code>sudo yum install -y gcc ruby-devel libxml2 libxml2-devel libxslt libxslt-devel</code>解决了这个问题。</p></blockquote></li>
+<li><p>安装pygments(用于语法高亮)</p>
+
+<blockquote><p><code>sudo yum install python-pygments</code><br/>
+更多详见：<a href="http://vblog.vell001.ml/2014/03/24/install-pygments.html">install-pygments</a>
+特别注意，你的python必须是2.x版本的，详情见：<a href="http://vblog.vell001.ml/2014/03/23/some-problem-with-octopress.html">some-problem-with-octopress</a></p></blockquote></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

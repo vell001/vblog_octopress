@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Hash | VBlog]]></title>
   <link href="http://vblog.vell001.ml/categories/hash/atom.xml" rel="self"/>
   <link href="http://vblog.vell001.ml/"/>
-  <updated>2014-04-03T09:44:49+08:00</updated>
+  <updated>2014-04-05T00:11:35+08:00</updated>
   <id>http://vblog.vell001.ml/</id>
   <author>
     <name><![CDATA[VellBibi]]></name>
@@ -20,7 +20,7 @@
     <id>http://vblog.vell001.ml/2014/04/03/hash</id>
     <content type="html"><![CDATA[<h2>HashTable（哈希表）</h2>
 
-<blockquote><p>散列表（Hash table，也叫哈希表），是根据关键字（Key value）而直接访问在内存存储位置的数据结构。也就是说，它通过把键值通过一个函数的计算，映射到表中一个位置来访问记录，这加快了查找速度。这个映射函数称做散列函数，存放记录的数组称做散列表。<a href="http://zh.wikipedia.org/zh/%E5%93%88%E5%B8%8C%E8%A1%A8">wiki</a></p>
+<blockquote><p>散列表（Hash table，也叫哈希表），是根据关键字（Key value）而直接访问在内存存储位置的数据结构。也就是说，它通过把键值通过一个函数的计算，映射到表中一个位置来访问记录，这加快了查找速度。这个映射函数称做散列函数，存放记录的数组称做散列表。<a href="http://zh.wikipedia.org/zh/%E5%93%88%E5%B8%8C%E8%A1%A8">wiki</a></p></blockquote>
 
 <h3>散列函数</h3>
 
@@ -30,10 +30,19 @@
 <li>平方取中法：取关键字平方后的中间几位做散列地址</li>
 <li>折叠法：将关键字分割成位数相同的几部分，最后一部分位数可以不同，然后取这几部分的叠加和（去除进位）作为散列地址。数位叠加可以有移位叠加和间界叠加两种方法。移位叠加是将分割后的每一部分的最低位对齐，然后相加；间界叠加是从一端向另一端沿分割界来回折叠，然后对齐相加。</li>
 <li>随机数法：选择一随机函数，取关键字的随机值作为散列地址</li>
-<li>除留余数法：取关键字被某个不大于散列表表长m的数p除后所得的余数为散列地址
+<li>除留余数法：取关键字被某个不大于散列表表长m的数p除后所得的余数为散列地址</li>
+</ul>
 
-<h3>冲突处理</h3></li>
-<li>链地址法
+
+<!-- more -->
+
+
+<h3>冲突处理</h3>
+
+<ul>
+<li>链地址法</li>
+</ul>
+
 
 <h3>ELFHash算法</h3>
 
@@ -75,9 +84,7 @@
 </span><span class='line'>	<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="n">ELFHash</span><span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">));</span>
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div><br/>
-2014/4/3 9:37:11</p></li>
-</ul>
-</blockquote>
+2014/4/3 9:37:11</p>
 ]]></content>
   </entry>
   

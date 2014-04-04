@@ -4,7 +4,7 @@
   <title><![CDATA[VBlog]]></title>
   <link href="http://vblog.vell001.ml/atom.xml" rel="self"/>
   <link href="http://vblog.vell001.ml/"/>
-  <updated>2014-04-03T09:44:49+08:00</updated>
+  <updated>2014-04-05T00:11:35+08:00</updated>
   <id>http://vblog.vell001.ml/</id>
   <author>
     <name><![CDATA[VellBibi]]></name>
@@ -13,13 +13,200 @@
 
   
   <entry>
+    <title type="html"><![CDATA[在linux上安装octopress博客环境]]></title>
+    <link href="http://vblog.vell001.ml/2014/04/04/install-octopress-linux.html"/>
+    <updated>2014-04-04T19:24:05+08:00</updated>
+    <id>http://vblog.vell001.ml/2014/04/04/install-octopress-linux</id>
+    <content type="html"><![CDATA[<blockquote><p>说明：我之前已经在ubuntu上部署安装过octopress，现在是把环境搬到centos上，本教程适合已经成功安装过octopress的纯屌丝！<a href="http://octopress.org/docs">更多教程上官网看吧</a></p></blockquote>
+
+<h2>安装全程</h2>
+
+<ul>
+<li>安装ruby环境（官网是1.9.3）
+
+<blockquote><p>详见：<a href="http://vblog.vell001.ml/2014/03/24/install-ruby.html">Install_ruby</a></p></blockquote></li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/bash</span>
+</span><span class='line'><span class="c"># install rvm</span>
+</span><span class='line'>curl -L get.rvm.io | bash -s stable
+</span><span class='line'><span class="nb">source</span> ~/.bashrc
+</span><span class='line'><span class="nb">source</span> ~/.bash_profile
+</span><span class='line'>
+</span><span class='line'><span class="c"># 修改 RVM 的 Ruby 安装源到淘宝</span>
+</span><span class='line'>sed -i -e <span class="s1">&#39;s/ftp\.ruby-lang\.org\/pub\/ruby/ruby\.taobao\.org\/mirrors\/ruby/g&#39;</span> ~/.rvm/config/db
+</span><span class='line'>
+</span><span class='line'><span class="c"># Install ruby 1.9.3</span>
+</span><span class='line'>rvm install 1.9.3
+</span><span class='line'>
+</span><span class='line'><span class="c"># 使用 ruby 1.9.3</span>
+</span><span class='line'>rvm use 1.9.3
+</span><span class='line'>
+</span><span class='line'><span class="c"># 设置默认ruby</span>
+</span><span class='line'>rvm use 1.9.3 --default
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- more -->
+
+
+<ul>
+<li>安装git环境（我的centos自带了）
+
+<blockquote><p>安装详见：<a href="http://git-scm.com/download/linux">Download Git for Linux and Unix</a></p></blockquote></li>
+<li>安装bundle</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>gem install bundler
+</span><span class='line'>bundle install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<pre><code>&gt; 在```bundle install```的时候可能会报错：```An error occurred while installing nokogiri (1.5.11), and Bundler cannot continue.```  
+&gt; 一般直接```gem install nokogiri -v '1.5.11'```就行了，如果还不行，[点我去官网](http://nokogiri.org/tutorials/installing_nokogiri.html)，我使用```sudo yum install -y gcc ruby-devel libxml2 libxml2-devel libxslt libxslt-devel```解决了这个问题。
+</code></pre>
+
+<ul>
+<li>安装pygments(用于语法高亮)
+
+<blockquote><p><code>sudo yum install python-pygments</code><br/>
+更多详见：<a href="http://vblog.vell001.ml/2014/03/24/install-pygments.html">install-pygments</a>
+特别注意，你的python必须是2.x版本的，详情见：<a href="http://vblog.vell001.ml/2014/03/23/some-problem-with-octopress.html">some-problem-with-octopress</a></p></blockquote></li>
+</ul>
+
+
+<p class='post-footer'>
+            原文地址:
+            <a href='http://vblog.vell001.ml/2014/04/04/install-octopress-linux.html'>http://vblog.vell001.ml/2014/04/04/install-octopress-linux.html</a><br/>
+            &nbsp;written by <a href='http://vblog.vell001.ml'>VellBibi</a>
+            &nbsp;posted at <a href='http://vblog.vell001.ml'>http://vblog.vell001.ml</a>
+            </p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hanoi(汉诺塔问题)]]></title>
+    <link href="http://vblog.vell001.ml/2014/04/03/hanoi.html"/>
+    <updated>2014-04-03T21:08:06+08:00</updated>
+    <id>http://vblog.vell001.ml/2014/04/03/hanoi</id>
+    <content type="html"><![CDATA[<h2>Hanoi问题由来</h2>
+
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/0/07/Tower_of_Hanoi.jpeg" alt="hanoi" /></p>
+
+<blockquote><p>法国数学家爱德华·卢卡斯曾编写过一个印度的古老传说：在世界中心贝拿勒斯（在印度北部）的圣庙里，一块黄铜板上插着三根宝石针。印度教的主神梵天在创造世界的时候，在其中一根针上从下到上地穿好了由大到小的64片金片，这就是所谓的汉诺塔。不论白天黑夜，总有一个僧侣在按照下面的法则移动这些金片：一次只移动一片，不管在哪根针上，小片必须在大片上面。僧侣们预言，当所有的金片都从梵天穿好的那根针上移到另外一根针上时，世界就将在一声霹雳中消灭，而梵塔、庙宇和众生也都将同归于尽。</p></blockquote>
+
+<h2>Hanoi规则</h2>
+
+<blockquote><p>在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘</p></blockquote>
+
+<!-- more -->
+
+
+<h2>分析</h2>
+
+<ol>
+<li>先把目标盘以上的盘片放到c上</li>
+<li>再把目标盘放到b上</li>
+<li>最后把c长的盘放到b上</li>
+</ol>
+
+
+<h2>递归实现</h2>
+
+<figure class='code'><figcaption><span> (hanoi.c)</span> <a href='http://vblog.vell001.ml/downloads/code/c_learning/hanoi.c'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="cp">#include &lt;stdio.h&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// record the step number</span>
+</span><span class='line'><span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// move floor n to b from a</span>
+</span><span class='line'><span class="kt">void</span> <span class="nf">move</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">char</span> <span class="n">a</span><span class="p">,</span> <span class="kt">char</span> <span class="n">b</span><span class="p">){</span>
+</span><span class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d  %d : %c-&gt;%c</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="o">++</span><span class="n">N</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1">// move a to b by c</span>
+</span><span class='line'><span class="kt">void</span> <span class="nf">hanoi</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">char</span> <span class="n">a</span><span class="p">,</span> <span class="kt">char</span> <span class="n">b</span><span class="p">,</span> <span class="kt">char</span> <span class="n">c</span><span class="p">){</span>
+</span><span class='line'>  <span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">){</span>
+</span><span class='line'>      <span class="n">hanoi</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+</span><span class='line'>      <span class="n">move</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+</span><span class='line'>      <span class="n">hanoi</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="kt">void</span> <span class="nf">main</span><span class="p">(){</span>
+</span><span class='line'>  <span class="n">hanoi</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="sc">&#39;a&#39;</span><span class="p">,</span> <span class="sc">&#39;b&#39;</span><span class="p">,</span> <span class="sc">&#39;c&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>2014-04-03 21:08:06</p>
+
+<p class='post-footer'>
+            原文地址:
+            <a href='http://vblog.vell001.ml/2014/04/03/hanoi.html'>http://vblog.vell001.ml/2014/04/03/hanoi.html</a><br/>
+            &nbsp;written by <a href='http://vblog.vell001.ml'>VellBibi</a>
+            &nbsp;posted at <a href='http://vblog.vell001.ml'>http://vblog.vell001.ml</a>
+            </p>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Hash]]></title>
     <link href="http://vblog.vell001.ml/2014/04/03/hash.html"/>
     <updated>2014-04-03T08:24:05+08:00</updated>
     <id>http://vblog.vell001.ml/2014/04/03/hash</id>
     <content type="html"><![CDATA[<h2>HashTable（哈希表）</h2>
 
-<blockquote><p>散列表（Hash table，也叫哈希表），是根据关键字（Key value）而直接访问在内存存储位置的数据结构。也就是说，它通过把键值通过一个函数的计算，映射到表中一个位置来访问记录，这加快了查找速度。这个映射函数称做散列函数，存放记录的数组称做散列表。<a href="http://zh.wikipedia.org/zh/%E5%93%88%E5%B8%8C%E8%A1%A8">wiki</a></p>
+<blockquote><p>散列表（Hash table，也叫哈希表），是根据关键字（Key value）而直接访问在内存存储位置的数据结构。也就是说，它通过把键值通过一个函数的计算，映射到表中一个位置来访问记录，这加快了查找速度。这个映射函数称做散列函数，存放记录的数组称做散列表。<a href="http://zh.wikipedia.org/zh/%E5%93%88%E5%B8%8C%E8%A1%A8">wiki</a></p></blockquote>
 
 <h3>散列函数</h3>
 
@@ -29,14 +216,21 @@
 <li>平方取中法：取关键字平方后的中间几位做散列地址</li>
 <li>折叠法：将关键字分割成位数相同的几部分，最后一部分位数可以不同，然后取这几部分的叠加和（去除进位）作为散列地址。数位叠加可以有移位叠加和间界叠加两种方法。移位叠加是将分割后的每一部分的最低位对齐，然后相加；间界叠加是从一端向另一端沿分割界来回折叠，然后对齐相加。</li>
 <li>随机数法：选择一随机函数，取关键字的随机值作为散列地址</li>
-<li>除留余数法：取关键字被某个不大于散列表表长m的数p除后所得的余数为散列地址
-
-<h3>冲突处理</h3></li>
-<li>链地址法
-
-<h3>ELFHash算法</h3></li>
+<li>除留余数法：取关键字被某个不大于散列表表长m的数p除后所得的余数为散列地址</li>
 </ul>
-</blockquote>
+
+
+<!-- more -->
+
+
+<h3>冲突处理</h3>
+
+<ul>
+<li>链地址法</li>
+</ul>
+
+
+<h3>ELFHash算法</h3>
 
 <figure class='code'><figcaption><span> (elfhash.c)</span> <a href='http://vblog.vell001.ml/downloads/code/c_learning/elfhash.c'>download</a></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -79,14 +273,15 @@
 
 
 <p>
-2014/4/3 9:37:11 <p class='post-footer'></p>
+2014/4/3 9:37:11</p>
 
-<pre><code>        原文地址:
-        &lt;a href='http://vblog.vell001.ml/2014/04/03/hash.html'&gt;http://vblog.vell001.ml/2014/04/03/hash.html&lt;/a&gt;&lt;br/&gt;
-        &amp;nbsp;written by &lt;a href='http://vblog.vell001.ml'&gt;VellBibi&lt;/a&gt;
-        &amp;nbsp;posted at &lt;a href='http://vblog.vell001.ml'&gt;http://vblog.vell001.ml&lt;/a&gt;
-        &lt;/p&gt;
-</code></pre>
+<p class='post-footer'>
+            原文地址:
+            <a href='http://vblog.vell001.ml/2014/04/03/hash.html'>http://vblog.vell001.ml/2014/04/03/hash.html</a><br/>
+            &nbsp;written by <a href='http://vblog.vell001.ml'>VellBibi</a>
+            &nbsp;posted at <a href='http://vblog.vell001.ml'>http://vblog.vell001.ml</a>
+            </p>
+
 ]]></content>
   </entry>
   
@@ -674,6 +869,8 @@
 </span><span class='line'>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
+
+
 
 
 <p class='post-footer'>
