@@ -47,4 +47,7 @@ bundle install
 	> 更多详见：[install-pygments](http://vblog.vell001.ml/2014/03/24/install-pygments.html)
 	> 特别注意，你的python必须是2.x版本的，详情见：[some-problem-with-octopress](http://vblog.vell001.ml/2014/03/23/some-problem-with-octopress.html)
 
-* 整个环境到此结束了，只要```source ~/.bash
+* 整个环境到此结束了，只要```source ~/.bash_profiles```就可以使用rake命令了。
+
+2014/4/5 0:15:58 
+
